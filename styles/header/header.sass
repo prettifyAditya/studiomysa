@@ -1,0 +1,111 @@
+@use '../_common' as *
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 5
+    transition: .5s ease
+    height: var(--headerheight)
+    @include after($secondary)
+    @include media(768)   
+        height: 100px
+    @include media(540)
+        height: 80px
+    &::after
+        bottom: auto
+        height: 0
+        z-index: -1
+        transition: .5s ease
+    .header-wrapper
+        height: 100%
+        display: flex
+        align-items: center
+        padding: 0 var(--containerfluid)
+        transition: .5s ease
+        --elementcolor: var(--white)
+        --elementhover: var(--primary)
+        gap: 1.5rem
+        @include media(1024)
+            gap: 1rem
+        @include media(991)   
+            align-items: center
+            justify-content: space-between
+        @include media(768)
+            gap: 2rem
+        @include media(540)     
+            gap: 10rem
+        @include media(400)
+            gap: 6rem
+        .colA,.colB
+            height: 100%
+        .colA
+            a.logo
+                padding: var(--headerpadding) 0
+                height: 100%
+                @include media(540)
+                    padding: 10px 0
+                img
+                    height: 100%
+                    @include media(768)
+                        object-fit: contain
+        .colB
+            flex: 1
+            ul
+                height: 100%
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                gap: 47px
+                text-align: center
+                cursor: default
+                user-select: none
+                li
+                    display: inline-block
+                    vertical-align: middle
+                    line-height: 1
+                    a
+                        &:not(.btn) 
+                            text-transform: uppercase
+                            color: var(--elementcolor)
+                            @include font(700)
+                            &:hover
+                                color: var(--elementhover)
+                    .ham-btn
+                        --width: 65px
+                        --height: 2px
+                        span
+                            display: block
+                            width: var(--width)
+                            height: var(--height)
+                            background-color: #fff
+                            transition: .5s ease
+                            &:not(:last-child)
+                                margin-bottom: 8px
+                        &:hover
+                            span
+                                background-color: var(--elementhover)
+
+header
+    &.header-fixed
+        @include media(991)
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    &.header-fixed,&.header-fit
+        transition: .5s ease
+        --headerpadding: 14px
+        height: var(--headerfixed)
+        @include media(768)
+            height: 50px
+        &::after
+            height: 100%
+    &.header-fit
+        transition: 0s
+        &::after
+            transition: none
+        .header-wrapper
+            .colA
+                .logo   
+                    transition: none !important
+    &.header-shadow
+        box-shadow: 0px 2px 8px 0px #63636333

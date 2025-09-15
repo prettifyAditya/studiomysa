@@ -1,0 +1,33 @@
+@use '../_common' as *   
+
+.interior-card.item-md
+    figure
+        img
+            border-radius: 15px
+    figcaption
+        bottom: 10%
+        padding: 0 10px 20px 
+        text-align: center
+        p
+            font-size: 20px
+            font-weight: 700
+
+.item-md.testimonial-col
+    &::before
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.8) 100%)
+    figure
+        img
+            border-radius: 15px
+    figcaption
+        padding: 0 20px 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .content
+            flex: 1
+            h6
+                font-size: 24px
+                line-height: 1.2
+                text-transform: capitalize
+            p
+                font-size: 16px
