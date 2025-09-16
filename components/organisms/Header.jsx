@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import "../../styles/header/header.css"
 import { useEffect, useState } from "react";
+import { useModalStore } from "@/store/modalStore";
 
 export default function Header(){
+    const openHam = useModalStore((state) => state.openHam)
     const [headerFixed, setHeaderFixed] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -26,7 +28,7 @@ export default function Header(){
                     <ul>
                         <li><Link href="/portfolio">Portfolio</Link></li>
                         <li>
-                            <button type="button" className="ham-btn">
+                            <button type="button" className="ham-btn" onClick={openHam}>
                                 <span></span>
                                 <span></span>
                             </button>

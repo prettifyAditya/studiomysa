@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import '../public/assets/font/font.css';
 @keyframes shine {
   from {
     opacity: 0;
@@ -2783,4 +2782,86 @@ em {
 }
 .iti__search-clear .iti__search-clear-bg {
   fill: var(--primary) !important;
-}/*# sourceMappingURL=global.css.map */
+}
+
+.project_listing_banner .banner-wrapper .heading h2 {
+  font-size: 48px;
+}
+
+.projects-secA .projects_tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+.projects-secA .projects_tabs li {
+  padding-bottom: 5px;
+  color: var(--white);
+  font-size: 24px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.projects-secA .projects_tabs li.active {
+  color: var(--secondary);
+}
+.projects-secA .projects_tabs li.active::before {
+  width: 100%;
+}
+.projects-secA .projects_tabs li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary);
+  transition: 0.5s ease;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 70px 30px;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col {
+  width: 100%;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col:hover figure img {
+  transform: scale(1.2);
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figure {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  line-height: 1;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figure img {
+  border-radius: 15px;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figcaption {
+  padding-top: 20px;
+}
+.projects-secA .tab-nav-content .tabs .projects_wrapper .project-col figcaption p {
+  font-size: 24px;
+  max-width: 425px;
+}/*# sourceMappingURL=projects.css.map */

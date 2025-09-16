@@ -1394,67 +1394,17 @@ img {
   --height: 45px;
   --padding: 25px;
 }
-.btn.white-border {
-  border: 1px solid var(--white);
+.btn.solid::before {
+  background: var(--secondary);
+}
+.btn.solid::after {
+  width: 100%;
   background: none;
 }
-.btn.white-border::before {
-  background: transparent;
+.btn.solid:hover {
+  color: var(--secondary);
 }
-.btn.white-border::after {
-  background: var(--white);
-}
-.btn.white-border:hover {
-  color: var(--black);
-}
-.btn.white-border:hover img {
-  filter: invert(1);
-}
-.btn.color-border {
-  border: 1px solid var(--primary);
-  border-radius: 25px;
-  background: none;
-  color: var(--primary);
-}
-.btn.color-border::before {
-  background: transparent;
-}
-.btn.color-border::after {
-  background: var(--primary);
-}
-.btn.color-border:hover {
-  color: var(--white);
-}
-.btn.primary-border {
-  border: 1px solid var(--primary);
-  border-radius: 5px;
-  background: none;
-  color: var(--primary);
-}
-.btn.primary-border::before {
-  background: var(--white);
-}
-.btn.primary-border::after {
-  background: var(--primary);
-}
-.btn.primary-border:hover {
-  color: var(--white);
-}
-.btn.white {
-  border: 1px solid var(--white);
-  background: none;
-  color: var(--black);
-}
-.btn.white::before {
-  background: var(--white);
-}
-.btn.white::after {
-  background: none;
-}
-.btn.white:hover {
-  color: var(--white);
-}
-.btn.white:hover img {
+.btn.solid:hover img {
   filter: invert(1);
 }
 
@@ -2682,7 +2632,7 @@ em {
   color: red;
   font-weight: 500;
   font-size: 14px;
-  top: calc(100% + 10px);
+  top: calc(100% + 5px);
 }
 
 @keyframes scroll {
@@ -2953,11 +2903,11 @@ header .header-wrapper .colB ul li {
 }
 header .header-wrapper .colB ul li a:not(.btn) {
   text-transform: uppercase;
-  color: var(--elementcolor);
+  color: var(--white);
   font-weight: 700;
 }
 header .header-wrapper .colB ul li a:not(.btn):hover {
-  color: var(--elementhover);
+  color: var(--secondary);
 }
 header .header-wrapper .colB ul li .ham-btn {
   --width: 65px;
@@ -2974,7 +2924,7 @@ header .header-wrapper .colB ul li .ham-btn span:not(:last-child) {
   margin-bottom: 8px;
 }
 header .header-wrapper .colB ul li .ham-btn:hover span {
-  background-color: var(--elementhover);
+  background-color: var(--secondary);
 }
 
 @media only screen and (max-width: 991px) {

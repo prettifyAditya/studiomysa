@@ -1,0 +1,47 @@
+@use '../../styles/_common' as * 
+
+.service_listing_banner
+    .banner-wrapper
+        .heading
+            h2
+                font-size: 80px
+
+.services-secA
+    background: var(--primary)
+    .service-col
+        align-items: center
+        --gap: 80px
+        gap: var(--gap)
+        &:nth-child(even)
+            .colA
+                order: 1
+            
+        .colA
+            flex: 0 1 calc(55% - var(--gap))
+            max-width: calc(55% - var(--gap))
+            width: 100%
+            figure
+                width: 100%
+                height: 100%
+                img
+                    border-radius: 15px
+        .colB
+            flex: 0 1 45%
+            max-width: 45%
+            width: 100%
+            position: relative
+            @include before-blur
+            &::before
+                filter: blur(120px)
+                right: 30%
+                top: 0%
+                translate: 30% 0%
+            h3
+                font-size: 36px
+                line-height: 1.2
+            .desc
+                padding: 15px 0 25px
+                max-width: 400px
+                p
+                    color: rgba(255, 255, 255, 0.6980392157)
+                    line-height: 1.5
