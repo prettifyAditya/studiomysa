@@ -6,12 +6,14 @@ import Image from "next/image";
 import ProjectsSection from "./ProjectsSection";
 import OurProcess from "./OurProcess";
 import Testimonials from "./Testimonials";
+import InteriorDesign from "./InteriorDesign";
 
 export default function Homepage(){
     return(
         <main>
             <Herosection />
             <InteriorExperience />
+            <InteriorDesign />
             <div className="home-secC banner">
                 <div className="bg">
                     <video src="/assets/video/homepage/about-mysa.mp4" poster="/assets/video/homepage/about-mysa-poster.png" autoPlay muted loop playsInline></video>
