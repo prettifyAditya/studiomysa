@@ -15,17 +15,18 @@ export default function InteriorExperience(){
 
         // pin the image-wrapper
         ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top top",
-        end: () => "+=" + window.innerHeight * cards.length,
-        pin: ".image-wrapper",
+            trigger: sectionRef.current,
+            start: "top top",
+            end: () => "+=" + window.innerHeight * cards.length,
+            pin: sectionRef.current,
         });
 
         cards.forEach((card, i) => {
         ScrollTrigger.create({
             trigger: sectionRef.current,
-            start: () => "top+=" + i * window.innerHeight + " top",
+            start: () => `top+=${i * window.innerHeight} top`,
             end: () => "+=" + window.innerHeight,
+            scrub: true,
             onEnter: () => {
             // add active to current
             card.classList.add("active");
@@ -36,11 +37,19 @@ export default function InteriorExperience(){
                 cards[i - 1].classList.add("exit");
             }
             },
+            onEnterBack: () => {
+                card.classList.add("active");
+
+                if (i > 0) {
+                    cards[i - 1].classList.remove("exit");
+                }
+            },
+            onLeave: () => {
+                card.classList.remove("active");
+            },
             onLeaveBack: () => {
-            // going backwards
             card.classList.remove("active");
             if (i > 0) {
-                cards[i - 1].classList.remove("exit");
                 cards[i - 1].classList.add("active");
             }
             },
