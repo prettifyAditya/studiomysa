@@ -1,86 +1,88 @@
 "use client";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image"
-import "@/styles/component/component.css"
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InteriorExperience(){
-    const sectionRef = useRef(null);
-    const cardsRef = useRef([]);
-    useEffect(() => {
-        const cards = cardsRef.current;
+export default function InteriorExperience() {
+  const sectionRef = useRef(null);
+  const cardsRef = useRef([]);
 
-        // pin the image-wrapper
-        ScrollTrigger.create({
-            trigger: sectionRef.current,
-            start: "top top",
-            end: () => "+=" + window.innerHeight * cards.length,
-            pin: sectionRef.current,
+  useEffect(() => {
+    const section = sectionRef.current;
+    const cards = (cardsRef.current || []).filter(Boolean);
+    if (!section || cards.length === 0) return;
+
+    const pinTarget =  section;
+
+    const st = ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: () => `+=${window.innerHeight * cards.length}`,
+      pin: pinTarget,
+      scrub: true,
+      markers: false, // turn on for debugging
+      onUpdate(self) {
+        const progress = self.progress * (cards.length - 1);
+        const currentIndex = Math.floor(progress);
+
+        // baseline: clear everything
+        cards.forEach((card) => {
+          card.classList.remove("active", "exit");
         });
 
-        cards.forEach((card, i) => {
-        ScrollTrigger.create({
-            trigger: sectionRef.current,
-            start: () => `top+=${i * window.innerHeight} top`,
-            end: () => "+=" + window.innerHeight,
-            scrub: true,
-            onEnter: () => {
-            // add active to current
-            card.classList.add("active");
+        // set current active
+        if (cards[currentIndex]) {
+          cards[currentIndex].classList.add("active");
+        }
 
-            // remove active + add exit to previous
-            if (i > 0) {
-                cards[i - 1].classList.remove("active");
-                cards[i - 1].classList.add("exit");
-            }
-            },
-            onEnterBack: () => {
-                card.classList.add("active");
+        // set all before current as exit
+        for (let i = 0; i < currentIndex; i++) {
+          cards[i].classList.add("exit");
+        }
+      },
+    });
 
-                if (i > 0) {
-                    cards[i - 1].classList.remove("exit");
-                }
-            },
-            onLeave: () => {
-                card.classList.remove("active");
-            },
-            onLeaveBack: () => {
-            card.classList.remove("active");
-            if (i > 0) {
-                cards[i - 1].classList.add("active");
-            }
-            },
-        });
-        });
-    }, []);
-    return(
-        <div className="home-secA bgprime" ref={sectionRef}>
-            <div className="main_wrapper">
-                <div className="heading">
-                    <h2>Interior Experience</h2>    
-                </div>
-                <div className="image-wrapper">
-                    {["interior1.jpg", "interior1.jpg", "interior1.jpg"].map((img, i) => (
-                        <div
-                            className="sticky-wrap"
-                            key={i}
-                            ref={(el) => (cardsRef.current[i] = el)}
-                        >
-                            <div className="item-md interior-card">
-                                <figure>
-                                    <img src={`/assets/images/other/${img}`} alt="Interior Image" />
-                                </figure>
-                                <figcaption>
-                                    <p>Hospitality</p>
-                                </figcaption>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+    const onLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", onLoad);
+    window.addEventListener("resize", ScrollTrigger.refresh);
+
+    return () => {
+      st.kill();
+      window.removeEventListener("load", onLoad);
+      window.removeEventListener("resize", ScrollTrigger.refresh);
+    };
+  }, []);
+
+  return (
+    <div className="home-secA bgprime" ref={sectionRef}>
+      <div className="main_wrapper">
+        <div className="heading">
+          <h2>Interior Experience</h2>
         </div>
-    )
+        <div className="image-wrapper">
+          {["interior1.jpg", "interior1.jpg", "interior1.jpg"].map((img, i) => (
+            <div
+              className="sticky-wrap"
+              key={i}
+              ref={(el) => (cardsRef.current[i] = el)}
+            >
+              <div className="item-md interior-card">
+                <figure>
+                  <img
+                    src={`/assets/images/other/${img}`}
+                    alt="Interior Image"
+                  />
+                </figure>
+                <figcaption>
+                  <p>Hospitality</p>
+                </figcaption>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
