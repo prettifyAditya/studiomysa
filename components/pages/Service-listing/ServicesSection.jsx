@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ServicesSection(){
+export default function ServicesSection({ reference }){
     return(
-        <div className="services-secA">
+        <div className="services-secA" ref={reference}>
             <div className="container">
                 <div className="flex sec-pad-all service-col">
                     <div className="colA">

@@ -14,15 +14,15 @@
 }
 .form {
   --inputsize: 48px;
-  --labelbefore: var(--text);
-  --labelafter: var(--black);
-  --borderbefore: var(--text);
-  --borderafter: var(--black);
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--secondary);
+  --borderafter: var(--white);
   --labelfontbefore: 16px;
   --labelfontafter: 14px;
   --font: 500;
   --inputsize: 42px;
-  --color: var(--black);
+  --color: var(--white);
   --borderwidth: 1px;
   --labelbackground: none;
   --font: normal;
@@ -1499,6 +1499,10 @@ img {
   width: 30px;
   height: 30px;
 }
+.swiper-nav.buttonbg .swiper-prev, .swiper-nav.buttonbg .swiper-next {
+  background: var(--secondary);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
+}
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;
   box-shadow: none;
@@ -2784,40 +2788,40 @@ em {
   fill: var(--primary) !important;
 }
 
-.home-banner::before {
+.home-banner.banner::before {
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
-.home-banner .banner-wrapper {
+.home-banner.banner .banner-wrapper {
   top: unset;
   bottom: 20%;
   translate: 0;
 }
 @media only screen and (max-width: 1366px) {
-  .home-banner .banner-wrapper {
+  .home-banner.banner .banner-wrapper {
     bottom: 10%;
     translate: 0 10%;
   }
 }
-.home-banner .banner-wrapper .heading .text-slider {
+.home-banner.banner .banner-wrapper .heading .text-slider {
   height: 130px;
 }
-.home-banner .banner-wrapper .heading .text-slider .swiper {
+.home-banner.banner .banner-wrapper .heading .text-slider .swiper {
   height: 100%;
 }
-.home-banner .banner-wrapper .heading .text-slider .swiper h2 {
+.home-banner.banner .banner-wrapper .heading .text-slider .swiper h2 {
   font-size: 100px;
 }
-.home-banner .banner-wrapper .heading p {
+.home-banner.banner .banner-wrapper .heading p {
   font-size: 24px;
   max-width: 700px;
 }
 @media only screen and (max-width: 1366px) {
-  .home-banner .banner-wrapper .heading p {
+  .home-banner.banner .banner-wrapper .heading p {
     font-size: 20px;
     max-width: 612px;
   }
 }
-.home-banner .banner-wrapper .scrollBtn {
+.home-banner.banner .banner-wrapper .scrollBtn {
   position: absolute;
   right: 5%;
   bottom: 10%;

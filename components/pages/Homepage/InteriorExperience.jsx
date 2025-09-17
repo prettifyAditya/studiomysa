@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function InteriorExperience() {
+export default function InteriorExperience({ reference }) {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
@@ -58,7 +58,7 @@ export default function InteriorExperience() {
   return (
     <div className="home-secA bgprime" ref={sectionRef}>
       <div className="main_wrapper">
-        <div className="heading">
+        <div className="heading" ref={reference}>
           <h2>Interior Experience</h2>
         </div>
         <div className="image-wrapper">

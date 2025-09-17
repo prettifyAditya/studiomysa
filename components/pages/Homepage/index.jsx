@@ -1,3 +1,4 @@
+"use client"
 import Herosection from "./Herosection";
 import InteriorExperience from "./InteriorExperience";
 import "../../../styles/home/home.css"
@@ -7,12 +8,23 @@ import ProjectsSection from "./ProjectsSection";
 import OurProcess from "./OurProcess";
 import Testimonials from "./Testimonials";
 import InteriorDesign from "./InteriorDesign";
+import { useRef } from "react";
 
 export default function Homepage(){
+    const interiorRef = useRef(null);
+    const scrollToInteriorExp = () => {
+        if(interiorRef.current) {
+            const offset = 100;
+            const top = interiorRef.current.offsetTop - offset;
+            window.scrollTo({ top, behavior: "smooth" });
+        }
+    }
     return(
         <main>
-            <Herosection />
-            <InteriorExperience />
+            <Herosection
+                scrollto={scrollToInteriorExp}
+            />
+            <InteriorExperience reference={interiorRef} />
             <InteriorDesign />
             <div className="home-secC banner">
                 <div className="bg">

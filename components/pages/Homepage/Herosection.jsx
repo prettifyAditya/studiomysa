@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import Image from "next/image"
 import { Autoplay } from "swiper/modules";
 
-export default function Herosection(){
+export default function Herosection({ scrollto }){
     return(
         <div className="banner home-banner">
             <div className="bg"> 
@@ -35,7 +35,7 @@ export default function Herosection(){
                             </div>
                             <p>Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs.</p>
                         </div>
-                        <button type="button" className="scrollBtn">
+                        <button type="button" className="scrollBtn" onClick={scrollto}>
                             <Image src="/assets/icon/scroll.svg" width={45} height={45} alt="Scroll down button"></Image>
                         </button>
                     </div>

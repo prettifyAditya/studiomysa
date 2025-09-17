@@ -14,15 +14,15 @@
 }
 .form {
   --inputsize: 48px;
-  --labelbefore: var(--text);
-  --labelafter: var(--black);
-  --borderbefore: var(--text);
-  --borderafter: var(--black);
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--secondary);
+  --borderafter: var(--white);
   --labelfontbefore: 16px;
   --labelfontafter: 14px;
   --font: 500;
   --inputsize: 42px;
-  --color: var(--black);
+  --color: var(--white);
   --borderwidth: 1px;
   --labelbackground: none;
   --font: normal;
@@ -1499,6 +1499,10 @@ img {
   width: 30px;
   height: 30px;
 }
+.swiper-nav.buttonbg .swiper-prev, .swiper-nav.buttonbg .swiper-next {
+  background: var(--secondary);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
+}
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;
   box-shadow: none;
@@ -2846,4 +2850,106 @@ em {
 .services-secA .service-col .colB .desc p {
   color: rgba(255, 255, 255, 0.6980392157);
   line-height: 1.5;
+}
+
+.serviceD-secA {
+  position: relative;
+  z-index: 0;
+}
+.serviceD-secA::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #886947;
+  filter: blur(150px);
+  border-radius: 50%;
+  z-index: -1;
+}
+.serviceD-secA::before {
+  filter: blur(120px);
+  right: 20%;
+  top: 10%;
+  translate: 20% -10%;
+}
+.serviceD-secA .heading {
+  text-align: center;
+  max-width: 610px;
+  margin: 0 auto 50px;
+}
+.serviceD-secA .heading p {
+  color: rgba(255, 255, 255, 0.6980392157);
+  line-height: 1.5;
+}
+.serviceD-secA .content_wrapper {
+  position: relative;
+}
+.serviceD-secA .content_wrapper .content_slider {
+  max-width: 1230px;
+}
+.serviceD-secA .content_wrapper .content_slider .content-col {
+  padding: 30px 25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.0509803922);
+}
+.serviceD-secA .content_wrapper .content_slider .content-col h6 {
+  font-family: "Lato";
+  font-size: 24px;
+  text-transform: capitalize;
+  line-height: 1.3;
+}
+.serviceD-secA .content_wrapper .content_slider .content-col p {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6980392157);
+  margin-top: 10px;
+}
+
+.serviceD-secB {
+  position: relative;
+  z-index: 0;
+}
+.serviceD-secB::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: #886947;
+  filter: blur(150px);
+  border-radius: 50%;
+  z-index: -1;
+}
+.serviceD-secB::before {
+  filter: blur(120px);
+  left: 20%;
+  bottom: 20%;
+  translate: -20% 20%;
+}
+.serviceD-secB .heading {
+  max-width: 830px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.serviceD-secB .heading h2 {
+  font-size: 36px;
+}
+.serviceD-secB .form-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.serviceD-secB .form-wrapper .form-grid {
+  --item: 2;
+}
+
+.serviceD-secC .heading {
+  max-width: 830px;
+  margin: 0 auto 60px;
+}
+.serviceD-secC .heading h2 {
+  font-size: 36px;
+}
+.serviceD-secC .more_services_wrapper {
+  position: relative;
+}
+.serviceD-secC .more_services_wrapper .more_slider {
+  max-width: 1230px;
 }/*# sourceMappingURL=service.css.map */

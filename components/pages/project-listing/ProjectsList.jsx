@@ -1,11 +1,12 @@
 "use client"
+import ProjectCol from "@/components/molecules/ProjectCol";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function ProjectsList(){
+export default function ProjectsList({ reference }){
     const [projectsActive, setProjectsActive] = useState("tab1")
     return(
-        <div className="projects-secA sec-pad-all bgprime">
+        <div className="projects-secA sec-pad-all bgprime" ref={reference}>
             <div className="container">
                 <div className="projects_tabs tab-nav">
                     <li className={projectsActive === "tab1" ? "active" : ""} onClick={() => setProjectsActive("tab1")}>Residential</li>
@@ -15,118 +16,70 @@ export default function ProjectsList(){
                 <div className="tab-nav-content">
                     <div className={`tabs ${projectsActive === "tab1" ? "active" : ""}`}>
                         <div className="projects_wrapper">
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
                         </div>
                     </div>
                     <div className={`tabs ${projectsActive === "tab2" ? "active" : ""}`}>
                         <div className="projects_wrapper">
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
                         </div>
                     </div>
                     <div className={`tabs ${projectsActive === "tab3" ? "active" : ""}`}>
                         <div className="projects_wrapper">
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
-                            <div className="project-col">
-                                <figure>
-                                    <Image src="/assets/images/other/projects1.jpg" width={577} height={362} alt="Projects Images"></Image>
-                                </figure>
-                                <figcaption>
-                                    <p>Luxury residence interior with a winter garden in Agalarov Estate</p>
-                                </figcaption>
-                            </div>
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
+                            <ProjectCol
+                                imgSrc="/assets/images/other/projects1.jpg"
+                                projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
+                            />
                         </div>
                     </div>
                 </div>

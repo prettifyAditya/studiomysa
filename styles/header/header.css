@@ -14,15 +14,15 @@
 }
 .form {
   --inputsize: 48px;
-  --labelbefore: var(--text);
-  --labelafter: var(--black);
-  --borderbefore: var(--text);
-  --borderafter: var(--black);
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--secondary);
+  --borderafter: var(--white);
   --labelfontbefore: 16px;
   --labelfontafter: 14px;
   --font: 500;
   --inputsize: 42px;
-  --color: var(--black);
+  --color: var(--white);
   --borderwidth: 1px;
   --labelbackground: none;
   --font: normal;
@@ -1498,6 +1498,10 @@ img {
 .swiper-nav.no_bg .swiper-prev img, .swiper-nav.no_bg .swiper-prev svg, .swiper-nav.no_bg .swiper-next img, .swiper-nav.no_bg .swiper-next svg {
   width: 30px;
   height: 30px;
+}
+.swiper-nav.buttonbg .swiper-prev, .swiper-nav.buttonbg .swiper-next {
+  background: var(--secondary);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
 }
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;

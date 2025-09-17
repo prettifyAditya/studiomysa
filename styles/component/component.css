@@ -14,15 +14,15 @@
 }
 .form {
   --inputsize: 48px;
-  --labelbefore: var(--text);
-  --labelafter: var(--black);
-  --borderbefore: var(--text);
-  --borderafter: var(--black);
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--secondary);
+  --borderafter: var(--white);
   --labelfontbefore: 16px;
   --labelfontafter: 14px;
   --font: 500;
   --inputsize: 42px;
-  --color: var(--black);
+  --color: var(--white);
   --borderwidth: 1px;
   --labelbackground: none;
   --font: normal;
@@ -1499,6 +1499,10 @@ img {
   width: 30px;
   height: 30px;
 }
+.swiper-nav.buttonbg .swiper-prev, .swiper-nav.buttonbg .swiper-next {
+  background: var(--secondary);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
+}
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;
   box-shadow: none;
@@ -2795,6 +2799,89 @@ em {
 .interior-card.item-md figcaption p {
   font-size: 20px;
   font-weight: 700;
+}
+
+.project-col {
+  width: 100%;
+}
+.project-col:hover figure img {
+  transform: scale(1.2);
+}
+.project-col figure {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  line-height: 1;
+}
+.project-col figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.project-col figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.project-col figure img {
+  border-radius: 15px;
+}
+.project-col figcaption {
+  padding-top: 20px;
+}
+.project-col figcaption p {
+  font-size: 24px;
+  max-width: 425px;
+}
+
+.item-md.services-md::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.8) 100%);
+}
+.item-md.services-md:hover figure img {
+  transform: scale(1.2);
+}
+.item-md.services-md figure {
+  border-radius: 15px;
+  position: relative;
+}
+.item-md.services-md figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.item-md.services-md figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.item-md.services-md figure img {
+  border-radius: 15px;
+}
+.item-md.services-md figcaption {
+  padding: 0 20px 30px;
+  text-align: center;
+}
+.item-md.services-md figcaption h6 {
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: capitalize;
 }
 
 .item-md.testimonial-col::before {
