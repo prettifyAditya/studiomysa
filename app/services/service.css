@@ -1503,6 +1503,13 @@ img {
   background: var(--secondary);
   box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
 }
+.swiper-nav.buttonbg-white .swiper-prev, .swiper-nav.buttonbg-white .swiper-next {
+  background: var(--white);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
+}
+.swiper-nav.buttonbg-white .swiper-prev svg path, .swiper-nav.buttonbg-white .swiper-next svg path {
+  stroke: var(--black);
+}
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;
   box-shadow: none;
@@ -2923,21 +2930,6 @@ em {
   left: 20%;
   bottom: 20%;
   translate: -20% 20%;
-}
-.serviceD-secB .heading {
-  max-width: 830px;
-  margin: 0 auto 60px;
-  text-align: center;
-}
-.serviceD-secB .heading h2 {
-  font-size: 36px;
-}
-.serviceD-secB .form-wrapper {
-  max-width: 850px;
-  margin: 0 auto;
-}
-.serviceD-secB .form-wrapper .form-grid {
-  --item: 2;
 }
 
 .serviceD-secC .heading {

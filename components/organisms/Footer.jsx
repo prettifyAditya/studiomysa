@@ -67,9 +67,9 @@ export default function Footer() {
                   <button type="button" className="btn solid">
                     Enquire Now
                   </button>
-                  <button type="button" className="btn">
+                  <Link href="" className="btn">
                     Whatsapp
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="colB">

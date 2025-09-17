@@ -3,8 +3,8 @@ import "@/app/services/service.css"
 import HeroBanner from "@/components/molecules/HeroBanner";
 import ServiceContent from "./ServiceContent";
 import { useRef } from "react";
-import FormSection from "./FormSection";
 import MoreServices from "./MoreServices";
+import FormSection from "@/components/molecules/FormSection";
 export default function ServiceDetailsPage(){
     const contentRef = useRef(null);
     const scrollToServiceSection = () => {
@@ -25,7 +25,9 @@ export default function ServiceDetailsPage(){
                 scrollto={scrollToServiceSection}
             />
             <ServiceContent reference={contentRef} />
-            <FormSection />
+            <FormSection
+                heading="creating interior with studio mysa"
+            />
             <MoreServices />
         </main>
     )

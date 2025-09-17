@@ -1504,6 +1504,13 @@ img {
   background: var(--secondary);
   box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
 }
+.swiper-nav.buttonbg-white .swiper-prev, .swiper-nav.buttonbg-white .swiper-next {
+  background: var(--white);
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
+}
+.swiper-nav.buttonbg-white .swiper-prev svg path, .swiper-nav.buttonbg-white .swiper-next svg path {
+  stroke: var(--black);
+}
 .swiper-nav.white-border .swiper-prev, .swiper-nav.white-border .swiper-next {
   background: none;
   box-shadow: none;

@@ -1,0 +1,176 @@
+@use '../../styles/_common' as * 
+
+.aboutus_banner.hero-banner.banner
+    .banner-wrapper
+        .heading
+            max-width: 780px
+            h2
+                font-size: 48px
+            p
+                font-size: 40px
+                font-weight: 400
+                margin-top: 15px
+
+.about-secA
+    @include before-blur
+    &::before
+        filter: blur(120px)
+        right: 30%
+        bottom: 0%
+        translate: 30% 0%
+    .flex
+        align-items: center
+        --gap: 80px
+        gap: var(--gap)
+        .colA
+            flex: 0 1 calc(50% - var(--gap))
+            max-width: calc(50% - var(--gap))
+            width: 100%
+            figure
+                img
+                    border-radius: 15px 
+        .colB
+            flex: 0 1 50%
+            max-width: 50%
+            width: 100%
+            figcaption
+                h2
+                    font-size: 36px
+                .desc
+                    padding: 15px 0 30px
+                    p
+                        line-height: 1.5
+                        color: #FFFFFFB2
+                        padding-bottom: 10px
+                .counter-wrapper
+                    display: flex
+                    gap: 30px
+                    .counter-info-wrap
+                        h5
+                            font-size: 24px
+                            color: var(--secondary)
+                            font-weight: 700
+                            padding-bottom: 5px
+                        p
+                            font-size: 14px
+                            color: #FFFFFFB2
+
+.about-secB
+    @include before-blur
+    &::before
+        filter: blur(120px)
+        left: 20%
+        bottom: 0%
+        translate: 20% 0%
+    .heading
+        text-align: center
+        h2
+            font-family: $Lato
+            text-transform: capitalize
+            font-weight: 400
+            font-size: 36px
+            span
+                font-size: 36px
+                text-transform: uppercase
+                font-family: $Zoom
+                font-weight: 500
+    .why_wrapper
+        .tab-nav
+            margin: 40px 0 60px
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 80px
+            li
+                position: relative
+                color: #8C8C8C
+                font-size: 20px
+                font-weight: 400
+                max-width: 230px
+                text-align: center
+                padding-bottom: 15px
+                cursor: pointer
+                &.active
+                    color: $white
+                    &::before
+                        width: 100%
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    height: 2px
+                    background: $white
+                    transition: .5s ease
+                    width: 0%
+        .tab-nav-content
+            .why-content
+                align-items: center
+                --gap: 60px
+                gap: var(--gap)
+                figure
+                    flex: 0 1 50%
+                    max-width: 50%
+                    width: 100%
+                    border-radius: 15px
+                    img
+                        border-radius: 15px 
+                figcaption
+                    flex: 0 1 calc(50% - var(--gap))
+                    max-width: calc(50% - var(--gap))
+                    width: 100%
+                    h5
+                        font-size: 30px
+                        text-transform: capitalize
+                        color: var(--secondary)
+                    .desc
+                        padding: 15px 0 0
+                        p
+                            color: #A9A9A9
+                            line-height: 1.5
+                            padding-bottom: 15px
+
+.about-secC
+    @include before-blur
+    &::before
+        filter: blur(120px)
+        right: 20%
+        bottom: 20%
+        translate: 20% 20%
+    .flex
+        align-items: center
+        justify-content: center
+        --gap: 80px
+        gap: var(--gap)
+        figure
+            flex: 0 1 40%
+            max-width: 40%
+            width: 100%
+            border-radius: 15px
+            img
+                border-radius: 15px 
+        figcaption
+            flex: 1
+            max-width: 50%
+            text-align: center
+            .icon
+                width: 50px
+                margin: 0 auto 30px
+            h3
+                font-size: 48px
+                font-family: $Lato
+                text-transform: capitalize
+            .desc
+                padding: 15px 0 30px
+                max-width: 400px 
+                margin: 0 auto 
+                p
+                    color: #FFFFFFB2
+                    font-size: 18px
+                    line-height: 1.5
+            .designation
+                img
+                    width: 200px
+                p
+                    font-size: 20px
+                    line-height: 1.5
