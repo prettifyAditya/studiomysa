@@ -567,6 +567,54 @@ svg path {
   width: 100%;
   padding: 0 var(--containerfluid);
 }
+@media only screen and (max-width: 1340px) {
+  .main_wrapper {
+    padding: 0;
+    max-width: var(--container);
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 1300px) {
+  .main_wrapper {
+    padding: 0 25px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 767px) {
+  .main_wrapper {
+    padding: 0 15px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 345px) {
+  .main_wrapper {
+    padding: 0 13px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 320px) {
+  .main_wrapper {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 675px) {
+  .main_wrapper.container2 {
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 675px) {
+  .main_wrapper.container2 .heading {
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 345px) {
+  .main_wrapper.container2 .heading {
+    padding-right: 13px;
+  }
+}
+@media only screen and (max-width: 1340px) and (max-width: 320px) {
+  .main_wrapper.container2 .heading {
+    padding-right: 10px;
+  }
+}
 
 .container-fluid {
   padding: 0 var(--containerfluid);
@@ -2964,7 +3012,7 @@ em {
 }
 .home-secA .image-wrapper .sticky-wrap.active {
   opacity: 1;
-  transform: translateY(20%) rotate(0deg);
+  transform: translateY(30%) rotate(0deg);
   pointer-events: all;
   -webkit-user-select: auto;
      -moz-user-select: auto;
@@ -2972,7 +3020,7 @@ em {
 }
 .home-secA .image-wrapper .sticky-wrap.exit {
   opacity: 0;
-  transform: translate(-150%, 20%);
+  transform: translate(-150%, 30%);
 }
 
 .home-secB .flex {

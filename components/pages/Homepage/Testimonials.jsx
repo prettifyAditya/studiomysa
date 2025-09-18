@@ -55,16 +55,16 @@ export default function Testimonials(){
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
                     >
                         <SwiperSlide>
-                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} />
+                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} videoSrc="https://youtube.com/embed/NopJnAhO9w0?si=IC-XAs_UJevoNFUp" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} />
+                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} videoSrc="https://youtube.com/embed/NopJnAhO9w0?si=IC-XAs_UJevoNFUp" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} />
+                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} videoSrc="https://youtube.com/embed/NopJnAhO9w0?si=IC-XAs_UJevoNFUp" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} />
+                            <TestimonialCol imgSrc="/assets/images/other/testimonial.jpg" Name={"Name Here"} Place={"Gurugram"} videoSrc="https://youtube.com/embed/NopJnAhO9w0?si=IC-XAs_UJevoNFUp" />
                         </SwiperSlide>
                     </Swiper>
                 </div>

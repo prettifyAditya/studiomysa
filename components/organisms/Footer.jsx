@@ -64,7 +64,7 @@ export default function Footer() {
                   </li>
                 </ul>
                 <div className="btn_wrap">
-                  <button type="button" className="btn solid">
+                  <button type="button" className="btn solid" onClick={openEnquire}>
                     Enquire Now
                   </button>
                   <Link href="" className="btn">
@@ -75,27 +75,21 @@ export default function Footer() {
               <div className="colB">
                 <ul>
                   <li>
-                    <Link href="">Projects</Link>
+                    <Link href="/projects">Projects</Link>
                   </li>
                   <li>
-                    <Link href="">About Us</Link>
-                  </li>
-                  <li>
-                    <Link href="">Clients</Link>
+                    <Link href="/about-us">About Us</Link>
                   </li>
                   <li><Link href="">Privacy Policy</Link></li>
                 </ul>
                 <ul>
                   <li>
-                    <Link href="">FAQ’s</Link>
-                  </li>
-                  <li>
                     <Link href="">Blogs</Link>
                   </li>
                   <li>
-                    <Link href="">Services</Link>
+                    <Link href="/services">Services</Link>
                   </li>
-                  <li><Link href="">Contact Us</Link></li>
+                  <li><Link href="/contact-us">Contact Us</Link></li>
                 </ul>
               </div>
             </div>

@@ -14,14 +14,14 @@ export default function Hamburger() {
         </svg>
       </button>
       <div className="model-body">
-        <div className="icon">
+        <Link href="/" className="icon" onClick={closeHam}>
           <Image src="/logo-dark.svg" width="200" height="50" className="svg" alt="icon" />
-        </div>
+        </Link>
         <ul className="nav-list">
-            <li><Link href="">About Us</Link></li>
-            <li><Link href="">Projects</Link></li>
-            <li><Link href="">Services</Link></li>
-            <li><Link href="">Contact Us</Link></li>
+            <li><Link href="/about-us" onClick={closeHam}>About Us</Link></li>
+            <li><Link href="/projects" onClick={closeHam}>Projects</Link></li>
+            <li><Link href="/services" onClick={closeHam}>Services</Link></li>
+            <li><Link href="/contact-us" onClick={closeHam}>Contact Us</Link></li>
         </ul>
         <div className="bottom-list">
           <div className="social-icons">

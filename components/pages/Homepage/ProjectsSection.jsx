@@ -53,7 +53,7 @@ export default function ProjectsSection(){
                         <div className="desc">
                             <p>This project reimagines modern living with a focus on comfort, functionality, and timeless aesthetics. Every corner of the home has been carefully designed to balance personal expression with practical needs.</p>
                         </div>
-                        <Link href="/" className="btn">Explore All Projects <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
+                        <Link href="/projects" className="btn">Explore All Projects <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
                     </div>
                 </div>
             </div>

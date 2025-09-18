@@ -17,26 +17,32 @@ export default function ProjectsList({ reference }){
                     <div className={`tabs ${projectsActive === "tab1" ? "active" : ""}`}>
                         <div className="projects_wrapper">
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
@@ -45,14 +51,17 @@ export default function ProjectsList({ reference }){
                     <div className={`tabs ${projectsActive === "tab2" ? "active" : ""}`}>
                         <div className="projects_wrapper">
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
@@ -61,22 +70,27 @@ export default function ProjectsList({ reference }){
                     <div className={`tabs ${projectsActive === "tab3" ? "active" : ""}`}>
                         <div className="projects_wrapper">
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />
                             <ProjectCol
+                                LinkHref="/project-details"
                                 imgSrc="/assets/images/other/projects1.jpg"
                                 projectDesc="Luxury residence interior with a winter garden in Agalarov Estate"
                             />

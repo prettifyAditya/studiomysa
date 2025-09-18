@@ -1,6 +1,8 @@
 import Image from "next/image"
 import "@/styles/component/component.css"
-export default function TestimonialCol({classname="", imgSrc="", Name, Place}){
+import { useModalStore } from "@/store/modalStore"
+export default function TestimonialCol({classname="", imgSrc="", Name, Place, videoSrc=""}){
+    const openVideo = useModalStore((state) => state.openVideo)
     return(
         <div className={`item-md testimonial-col ${classname}`}>
             <figure>
@@ -11,7 +13,7 @@ export default function TestimonialCol({classname="", imgSrc="", Name, Place}){
                     <h6>{Name}</h6>
                     <p>{Place}</p>
                 </div>
-                <button type="button" className="play-btn"></button>
+                <button type="button" className="play-btn" onClick={openVideo} data-video={videoSrc}></button>
             </figcaption>
         </div>
     )

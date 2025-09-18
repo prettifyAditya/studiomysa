@@ -1,5 +1,18 @@
+"use client"
 import "@/styles/component/component.css"
+import SelectBox from "../atoms/SelectBox"
+import { useState } from "react"
+
+
+const options_Interest = [
+  { value: "Option 1", label: "Option 1"},
+  { value: "Option 2", label: "Option 2"},
+  { value: "Option 3", label: "Option 3"},
+  { value: "Option 4", label: "Option 4"},
+]
+
 export default function FormSection({ heading="" }){
+    const [interest, setInterest] = useState(null);
     return(
         <div className="form-section sec-pad-all bgprime">
             <div className="container">
@@ -20,10 +33,13 @@ export default function FormSection({ heading="" }){
                             <input type="tel" name="phone" className="form-control" />
                             <label htmlFor="phone">Phone</label>
                         </div>
-                        <div className="form-group">
-                            <input type="text" name="selection" className="form-control" />
-                            <label htmlFor="selection">Interest in</label>
-                        </div>
+                        <SelectBox
+                            id="interested-select"
+                            placeholder="Interested in"
+                            options={options_Interest}
+                            selectedValue={interest}
+                            onValueChange={setInterest}
+                        />
                         <div className="form-group full">
                             <textarea name="message" className="form-control" />
                             <label htmlFor="message">Message</label>

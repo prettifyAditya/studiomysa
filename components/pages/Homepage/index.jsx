@@ -9,6 +9,7 @@ import OurProcess from "./OurProcess";
 import Testimonials from "./Testimonials";
 import InteriorDesign from "./InteriorDesign";
 import { useRef } from "react";
+import VideoPopup from "@/components/organisms/VideoPop";
 
 export default function Homepage(){
     const interiorRef = useRef(null);
@@ -34,13 +35,14 @@ export default function Homepage(){
                             <h2>Studio MYSA</h2>
                             <p>At Studio MYSA, we believe that every space tells a story. Our passion lies in transforming ordinary rooms into extraordinary experiences—where functionality meets elegance, and design meets comfort.</p>
                         </div>
-                        <Link href="/" className="btn">ABOUT STUDIO MYSA <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
+                        <Link href="/about-us" className="btn">ABOUT STUDIO MYSA <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
                     </div>
                 </div>
             </div>
             <ProjectsSection />
             <OurProcess />
             <Testimonials />
+            <VideoPopup />
         </main>
     )
 }

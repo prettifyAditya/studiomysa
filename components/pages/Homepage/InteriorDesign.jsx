@@ -58,7 +58,7 @@ export default function InteriorDesign(){
                         <div className="desc">
                             <p>Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs. We blend functionality with aesthetics to create environments that inspire.</p>
                         </div>
-                        <Link href="/" className="btn">Explore <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
+                        <Link href="/service-details" className="btn">Explore <Image src="/assets/icon/btn-icon.svg"width={20} height={20} alt="Button Icon"></Image></Link>
                     </div>
                 </div>
             </div>
