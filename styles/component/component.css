@@ -2894,6 +2894,12 @@ em {
 .item-md.testimonial-col::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 61%, rgba(0, 0, 0, 0.8) 100%);
 }
+.item-md.testimonial-col:hover figure img {
+  transform: scale(1.2);
+}
+.item-md.testimonial-col figure {
+  border-radius: 15px;
+}
 .item-md.testimonial-col figure img {
   border-radius: 15px;
 }

@@ -1,8 +1,8 @@
 import Image from "next/image"
 import "@/styles/component/component.css"
-export default function TestimonialCol({imgSrc="", Name, Place}){
+export default function TestimonialCol({classname="", imgSrc="", Name, Place}){
     return(
-        <div className="item-md testimonial-col">
+        <div className={`item-md testimonial-col ${classname}`}>
             <figure>
                 <Image src={imgSrc} width={386} height={419} alt="Testimonial Image"></Image>
             </figure>

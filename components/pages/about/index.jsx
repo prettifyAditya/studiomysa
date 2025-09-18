@@ -5,6 +5,7 @@ import OurStory from "./OurStory";
 import WhyChoose from "./WhyChoose";
 import { useRef } from "react";
 import DirectorSec from "./DirectorSec";
+import TeamMember from "./TeamMember";
 
 export default function AboutusPage(){
     const storyRef = useRef(null);
@@ -28,6 +29,7 @@ export default function AboutusPage(){
             <OurStory reference={storyRef} />
             <WhyChoose />
             <DirectorSec />
+            <TeamMember />
         </main>
     )
 }
