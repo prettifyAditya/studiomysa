@@ -1699,7 +1699,7 @@ img {
   margin-bottom: 0 !important;
 }
 .website-content h1, .website-content h2, .website-content h3, .website-content h4, .website-content h5, .website-content h6 {
-  color: var(--black);
+  color: var(--white);
 }
 .website-content h1 {
   font-size: 48px;
@@ -1769,7 +1769,7 @@ img {
   font-weight: normal;
 }
 .website-content a {
-  color: var(--black) !important;
+  color: var(--secondary) !important;
 }
 .website-content a:hover {
   text-decoration: underline;
@@ -1805,7 +1805,7 @@ img {
   width: 10px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: var(--black);
+  background: var(--secondary);
 }
 
 .container-fluid.slider-section .upper-sec .slider-nav {
@@ -2966,7 +2966,7 @@ header .header-wrapper .colB ul li a:not(.btn) {
   font-weight: 700;
 }
 header .header-wrapper .colB ul li a:not(.btn):hover {
-  color: var(--secondary);
+  color: var(--black);
 }
 header .header-wrapper .colB ul li .ham-btn {
   --width: 65px;
@@ -2983,7 +2983,7 @@ header .header-wrapper .colB ul li .ham-btn span:not(:last-child) {
   margin-bottom: 8px;
 }
 header .header-wrapper .colB ul li .ham-btn:hover span {
-  background-color: var(--secondary);
+  background-color: var(--black);
 }
 
 @media only screen and (max-width: 991px) {

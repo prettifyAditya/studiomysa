@@ -2,8 +2,24 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const interiorData = [
+  {
+    imgSrc: "/assets/images/other/interior1.jpg",
+    name: "Hospitality"
+  }, 
+  {
+    imgSrc: "/assets/images/other/interior1.jpg",
+    name: "Hospitality 2"
+  }, 
+  {
+    imgSrc: "/assets/images/other/interior1.jpg",
+    name: "Hospitality 3"
+  }, 
+]
 
 export default function InteriorExperience({ reference }) {
   const sectionRef = useRef(null);
@@ -21,8 +37,7 @@ export default function InteriorExperience({ reference }) {
       start: "top top",
       end: () => `+=${window.innerHeight * cards.length}`,
       pin: pinTarget,
-      scrub: true,
-      markers: false, // turn on for debugging
+      scrub: 2,
       onUpdate(self) {
         const progress = self.progress * (cards.length - 1);
         const currentIndex = Math.floor(progress);
@@ -62,23 +77,23 @@ export default function InteriorExperience({ reference }) {
           <h2>Interior Experience</h2>
         </div>
         <div className="image-wrapper">
-          {["interior1.jpg", "interior1.jpg", "interior1.jpg"].map((img, i) => (
+          {interiorData.map((data, i) => (
             <div
               className="sticky-wrap"
               key={i}
               ref={(el) => (cardsRef.current[i] = el)}
             >
-              <div className="item-md interior-card">
+              <Link className="item-md interior-card" href="">
                 <figure>
                   <img
-                    src={`/assets/images/other/${img}`}
+                    src={data.imgSrc}
                     alt="Interior Image"
                   />
                 </figure>
                 <figcaption>
-                  <p>Hospitality</p>
+                  <p>{data.name}</p>
                 </figcaption>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

@@ -4,6 +4,7 @@
     &::before
         background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)
     .banner-wrapper
+        width: 100%
         top: unset 
         bottom: 20%
         translate: 0
@@ -12,22 +13,23 @@
             translate: 0 10%
         .heading
             .text-slider
-                height: 130px
+                height: 250px
                 .swiper
                     height: 100%
                     h2
                         font-size: 100px
-            p
-                font-size: 24px
-                max-width: 700px
-                @include media(1366)
-                    font-size: 20px
-                    max-width: 612px
+                        margin-bottom: 10px
+                    p
+                        font-size: 24px
+                        @include media(1366)
+                            font-size: 20px
+                            max-width: 612px
         .scrollBtn
             position: absolute
             right: 5%
             bottom: 10%
             translate: 5% 10%
+            z-index: 2
             animation: scroll 1.5s ease-in-out infinite forwards
             @keyframes scroll   
                 0%
@@ -54,6 +56,8 @@
         height: 100%
         overflow-x: hidden
         @include before-blur
+        @include media(1340)
+            max-width: 100%
         &::before
             top: 15%
             left: 0
@@ -114,6 +118,32 @@
                 transform: translate(-150%, 30%) 
 
 .home-secB
+    height: 100vh
+    .main_wrapper
+        position: relative
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        .design-slide
+            transition: 0.6s ease
+            &:not(.active)
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                pointer-events: none
+                user-select: none
+                opacity: 0
+                height: 0
+                overflow: hidden
+            &.active
+                .flex
+                    .colA
+                        transform: scale(1) translateX(0)
+                    .colB
+                        transform: translateX(0)
     .flex
         align-items: center
         --gap: 80px
@@ -125,7 +155,8 @@
             flex: 0 1 calc( 55% - var(--gap) )
             max-width: calc( 55% - var(--gap) )
             width: 100%
-            transition: 1s ease
+            transition: 1.5s ease-out
+            transform: scale(.5) translateX(100%)
             figure
                 img
                     border-radius: 15px
@@ -133,7 +164,8 @@
             flex: 0 1 45%
             max-width: 45%
             width: 100%
-            transition: 1s ease
+            transition: 2s ease-out
+            transform: translateX(100%)
             h2
                 font-size: 36px
                 line-height: 1.2
@@ -218,7 +250,7 @@
 
 .home-secE
     width: 100%
-    height: 90vh
+    height: 100vh
     overflow: hidden
     @include before-blur
     &::before

@@ -1,14 +1,40 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; 
-import "swiper/css/autoplay";
-import { Autoplay } from "swiper/modules";
 import Image from "next/image"
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function OurProcess(){
+    const swiperRef = useRef(null);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        if (!swiperRef.current) return;
+
+        const swiper = swiperRef.current.swiper;
+        const slidesCount = swiper.slides.length;
+
+        // Pin section and control swiper based on scroll progress
+        ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top 7%",
+        end: () => "+=" + window.innerHeight * slidesCount,
+        scrub: true,
+        pin: true,
+        onUpdate: (self) => {
+            const progress = self.progress * (slidesCount - 1);
+            swiper.slideTo(Math.round(progress));
+        },
+        });
+    }, []);
+
     return(
-        <div className="home-secE sec-pad-all bgprime">
+        <div className="home-secE sec-pad-all bgprime" ref={sectionRef}>
             <div className="main_wrapper">
                 <div className="heading">
                     <h2>Our Process</h2>
@@ -16,13 +42,12 @@ export default function OurProcess(){
                 <div className="process_wrapper">
                     <Swiper 
                         className="process-slider"
-                        loop={true}
                         // autoplay={{ delay: 2000, disableOnInteraction: false,}}
                         direction="vertical"
                         slidesPerView ={1}
                         spaceBetween={50}
                         speed={1800}
-                        modules={[Autoplay]}
+                        onSwiper={(swiper) => (swiperRef.current = { swiper })}
                     >
                         <SwiperSlide>
                             <div className="process_col flex">

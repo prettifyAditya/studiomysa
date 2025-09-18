@@ -4,10 +4,14 @@ import Link from "next/link";
 import "../../styles/header/header.css"
 import { useEffect, useState } from "react";
 import { useModalStore } from "@/store/modalStore";
+import { usePathname } from "next/navigation";
 
 export default function Header(){
     const openHam = useModalStore((state) => state.openHam)
     const [headerFixed, setHeaderFixed] = useState(false);
+    const pathname = usePathname()
+    const isBlogsPage = pathname.startsWith('/blogs')
+    const headerFill = isBlogsPage
     useEffect(() => {
         const handleScroll = () => {
             setHeaderFixed(window.scrollY > 100)
@@ -17,7 +21,7 @@ export default function Header(){
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
     return(
-        <header className={`${headerFixed ? "header-fixed" : ""}`}>
+        <header className={`${headerFixed ? "header-fixed" : ""} ${headerFill ? "header-fit" : ""}`}>
             <div className="header-wrapper">
                 <div className="colA">
                     <Link href="/" className="logo">
