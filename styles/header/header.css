@@ -1539,6 +1539,16 @@ img {
 .swiper-nav {
   line-height: 0;
 }
+@media only screen and (max-width: 540px) {
+  .swiper-nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .swiper-nav.no_bg {
+    display: none;
+  }
+}
 .swiper-nav.no_bg .swiper-prev, .swiper-nav.no_bg .swiper-next {
   background: none;
   box-shadow: none;
@@ -1602,6 +1612,11 @@ img {
 @media only screen and (max-width: 1152px) {
   .swiper-nav.group {
     gap: 0 8px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .swiper-nav.group {
+    display: none;
   }
 }
 .swiper-nav.icon-width-auto .swiper-next svg, .swiper-nav.icon-width-auto .swiper-prev svg {
@@ -2872,16 +2887,6 @@ header::after {
   background: var(--secondary);
   transition: 0.5s ease;
 }
-@media only screen and (max-width: 768px) {
-  header {
-    height: 100px;
-  }
-}
-@media only screen and (max-width: 540px) {
-  header {
-    height: 80px;
-  }
-}
 header::after {
   bottom: auto;
   height: 0;
@@ -2916,16 +2921,16 @@ header .header-wrapper {
 }
 @media only screen and (max-width: 540px) {
   header .header-wrapper {
-    gap: 10rem;
-  }
-}
-@media only screen and (max-width: 400px) {
-  header .header-wrapper {
-    gap: 6rem;
+    gap: 1rem;
   }
 }
 header .header-wrapper .colA, header .header-wrapper .colB {
   height: 100%;
+}
+@media only screen and (max-width: 768px) {
+  header .header-wrapper .colA {
+    height: 90%;
+  }
 }
 header .header-wrapper .colA a.logo {
   padding: var(--headerpadding) 0;
@@ -2960,6 +2965,11 @@ header .header-wrapper .colB ul {
      -moz-user-select: none;
           user-select: none;
 }
+@media only screen and (max-width: 768px) {
+  header .header-wrapper .colB ul {
+    gap: 20px;
+  }
+}
 header .header-wrapper .colB ul li {
   display: inline-block;
   vertical-align: middle;
@@ -2972,6 +2982,11 @@ header .header-wrapper .colB ul li a:not(.btn) {
 }
 header .header-wrapper .colB ul li a:not(.btn):hover {
   color: var(--black);
+}
+@media only screen and (max-width: 768px) {
+  header .header-wrapper .colB ul li a {
+    display: none;
+  }
 }
 header .header-wrapper .colB ul li .ham-btn {
   --width: 65px;
@@ -3000,11 +3015,6 @@ header.header-fixed, header.header-fit {
   transition: 0.5s ease;
   --headerpadding: 14px;
   height: var(--headerfixed);
-}
-@media only screen and (max-width: 768px) {
-  header.header-fixed, header.header-fit {
-    height: 50px;
-  }
 }
 header.header-fixed::after, header.header-fit::after {
   height: 100%;

@@ -32,7 +32,7 @@ export default function Header(){
                 </div>
                 <div className="colB">
                     <ul>
-                        <li><Link href="/portfolio">Portfolio</Link></li>
+                        <li><Link href="/projects">Portfolio</Link></li>
                         <li>
                             <button type="button" className="ham-btn" onClick={openHam}>
                                 <span></span>

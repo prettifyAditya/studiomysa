@@ -9,10 +9,6 @@ header
     transition: .5s ease
     height: var(--headerheight)
     @include after($secondary)
-    @include media(768)   
-        height: 100px
-    @include media(540)
-        height: 80px
     &::after
         bottom: auto
         height: 0
@@ -34,13 +30,13 @@ header
             justify-content: space-between
         @include media(768)
             gap: 2rem
-        @include media(540)     
-            gap: 10rem
-        @include media(400)
-            gap: 6rem
+        @include media(540)   
+            gap: 1rem
         .colA,.colB
             height: 100%
         .colA
+            @include media(768)   
+                height: 90%
             a.logo
                 padding: var(--headerpadding) 0
                 height: 100%
@@ -61,6 +57,8 @@ header
                 text-align: center
                 cursor: default
                 user-select: none
+                @include media(768) 
+                    gap: 20px
                 li
                     display: inline-block
                     vertical-align: middle
@@ -72,6 +70,8 @@ header
                             @include font(700)
                             &:hover
                                 color: var(--black)
+                        @include media(768)   
+                            display: none
                     .ham-btn
                         --width: 65px
                         --height: 2px
@@ -95,8 +95,6 @@ header
         transition: .5s ease
         --headerpadding: 14px
         height: var(--headerfixed)
-        @include media(768)
-            height: 50px
         &::after
             height: 100%
     &.header-fit

@@ -3,6 +3,9 @@
 .home-banner.banner
     &::before
         background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)
+    .bg
+        @include media(540) 
+            height: 70vh
     .banner-wrapper
         width: 100%
         top: unset 
@@ -14,16 +17,35 @@
         .heading
             .text-slider
                 height: 250px
+                @include media(1420)
+                    height: 160px
+                @include media(991)
+                    height: 140px
                 .swiper
                     height: 100%
                     h2
                         font-size: 100px
                         margin-bottom: 10px
+                        @include media(1420)
+                            font-size: 80px
+                        @include media(991)
+                            font-size: 65px
+                        @include media(768)   
+                            font-size: 50px
+                        @include media(540) 
+                            font-size: 30px
                     p
                         font-size: 24px
                         @include media(1366)
                             font-size: 20px
                             max-width: 612px
+                        @include media(991)
+                            font-size: 18px
+                        @include media(768)   
+                            font-size: 16px
+                            max-width: 360px 
+                        @include media(540) 
+                            max-width: 250px
         .scrollBtn
             position: absolute
             right: 5%
@@ -31,6 +53,10 @@
             translate: 5% 10%
             z-index: 2
             animation: scroll 1.5s ease-in-out infinite forwards
+            @include media(991) 
+                width: 40px
+            @include media(540) 
+                max-width: 30px
             @keyframes scroll   
                 0%
                     transform: translateY(0px)
@@ -84,6 +110,14 @@
         pointer-events: none
         h2
             font-size: 80px
+            @include media(1420)
+                font-size: 60px
+            @include media(991) 
+                font-size: 50px
+            @include media(768)   
+                font-size: 38px
+            @include media(540) 
+                font-size: 26px
     .image-wrapper
         width: 100%
         height: calc( 100vh - var(--headerfixed) )
@@ -108,6 +142,12 @@
             opacity: 0
             pointer-events: none
             user-select: none
+            @include media(1420)
+                max-width: 310px
+            @include media(768) 
+                max-width: 270px
+            @include media(540) 
+                max-width: 250px
             &.active
                 opacity: 1
                 transform: translateY(30%) rotate(0deg)
@@ -151,12 +191,19 @@
         overflow-x: hidden
         @include media(1366)
             --gap: 50px
+        @include media(991) 
+            --gap: 25px
+        @include media(768) 
+            flex-direction: column
         .colA
             flex: 0 1 calc( 55% - var(--gap) )
             max-width: calc( 55% - var(--gap) )
             width: 100%
             transition: 1.5s ease-out
             transform: scale(.5) translateX(100%)
+            @include media(768) 
+                flex: 1
+                max-width: 350px
             figure
                 img
                     border-radius: 15px
@@ -166,20 +213,39 @@
             width: 100%
             transition: 2s ease-out
             transform: translateX(100%)
+            @include media(768) 
+                flex: 1
+                max-width: 100%
+                text-align: center
             h2
                 font-size: 36px
                 line-height: 1.2
                 max-width: 565px
+                @include media(1420)
+                    font-size: 32px
+                @include media(991) 
+                    font-size: 26px
+                @include media(768) 
+                    font-size: 22px
+                @include media(540) 
+                    font-size: 20px
             .desc
                 padding: 15px 0 25px
                 max-width: 400px
+                @include media(768) 
+                    margin: 0 auto
+                    max-width: 490px
                 p
                     color: #FFFFFFB2
                     line-height: 1.5
+                    @include media(540) 
+                        font-size: 14px
 
-.home-secC
+.home-secC.banner
     .bg
         height: calc( 100vh - var(--headerfixed) )
+        @include media(540) 
+            height: 60vh
     &::before
         background: linear-gradient(270deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)
     .banner-wrapper
@@ -189,11 +255,16 @@
         height: 80%
         .heading
             h2
-                font-size: 85px
+                font-size: 6vw
             p
                 margin-top: 30px
                 max-width: 600px
                 line-height: 1.5
+                @include media(768) 
+                    margin-top: 15px
+                    max-width: 400px
+                @include media(540) 
+                    font-size: 14px
         .btn
             position: absolute
             right: 5%
@@ -213,20 +284,38 @@
         text-align: center
         h2
             font-weight: 500
-            font-size: 80px
+            font-size: 7vw
+            @include media(1420)
+                font-size: 6vw
     .projects-wrapper
         margin-top: 80px
         align-items: center
         gap: 80px
         @include media(1366)
             gap: 50px
+        @include media(991) 
+            margin-top: 50px
+            gap: 35px
+        @include media(768) 
+            flex-direction: column
+        @include media(540) 
+            margin-top: 30px
+            gap: 25px
         .colA
             flex: 1
             max-width: 50%
             width: 100%
+            @include media(768) 
+                max-width: 100%
             .project_img_slider
                 .swiper
                     max-height: 700px
+                    @include media(1420)
+                        max-height: 400px
+                    @include media(768) 
+                        max-height: 300px
+                    @include media(540) 
+                        max-height: 250px
                 figure
                     height: 100%
                     line-height: 0
@@ -236,17 +325,31 @@
             flex: 1
             max-width: 50%
             width: 100%
+            @include media(768) 
+                max-width: 100%
             h3
                 font-size: 30px
                 max-width: 490px 
                 line-height: 1.5
+                @include media(1420)
+                    font-size: 28px
+                @include media(991) 
+                    font-size: 20px
+                @include media(540) 
+                    font-size: 16px
             .desc
                 padding: 20px 0 25px
+                @include media(540) 
+                    padding: 10px 0 15px
                 p
                     line-height: 1.5
                     padding-bottom: 10px
                     color: #FFFFFFB2
                     max-width: 430px
+                    @include media(768) 
+                        max-width: 100%
+                    @include media(540) 
+                        font-size: 14px
 
 .home-secE
     width: 100%
@@ -267,6 +370,16 @@
             margin-bottom: 20px
             h2
                 font-size: 48px
+                @include media(1420)
+                    font-size: 42px
+                @include media(1200) 
+                    font-size: 30px
+                @include media(991) 
+                    font-size: 28px
+                @include media(768) 
+                    font-size: 26px
+                @include media(540) 
+                    font-size: 20px
         .process_wrapper
             height: 70vh
             .process-slider
@@ -277,6 +390,14 @@
                 align-items: center
                 justify-content: center
                 text-align: center
+                @include media(1420)
+                    gap: 10px
+                @include media(768) 
+                    gap: 20px
+                    text-align: left
+                @include media(540) 
+                    gap: 10px
+                    text-align: center
                 .colA, .colC
                     flex: 0 1 auto
                     figure
@@ -287,8 +408,19 @@
                             border-radius: 10px
                 .colA
                     transform: translateY(80px)
+                    min-width: 200px
+                    @include media(991) 
+                        min-width: 160px
+                    @include media(768) 
+                        min-width: 220px
+                        transform: translateY(0)
                 .colC
                     transform: translateY(-80px)
+                    min-width: 200px
+                    @include media(991) 
+                        min-width: 160px
+                    @include media(768) 
+                        display: none
                 .colB
                     flex: 1
                     max-width: 500px
@@ -299,6 +431,12 @@
                             margin-bottom: 10px
                             text-transform: capitalize
                             font-family: $Lato
+                            @include media(991) 
+                                font-size: 38px
+                            @include media(768) 
+                                font-size: 30px
+                            @include media(540) 
+                                line-height: 1.2
                         p
                             color: #FFFFFFB2
                             max-width: 362px
@@ -311,6 +449,14 @@
             text-align: center
             h2
                 font-size: 36px
+                @include media(1420)
+                    font-size: 32px
+                @include media(991) 
+                    font-size: 28px
+                @include media(768) 
+                    font-size: 22px
+                @include media(540) 
+                    font-size: 18px
             .swiper-nav
                 position: absolute
                 right: 0
@@ -320,3 +466,7 @@
             margin-top: 70px
             @include media(1366)
                 margin-top: 50px
+            @include media(991) 
+                margin-top: 40px
+            @include media(768) 
+                margin-top: 30px

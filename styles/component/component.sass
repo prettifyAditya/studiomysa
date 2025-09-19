@@ -9,6 +9,8 @@
         bottom: 10%
         padding: 0 10px 20px 
         text-align: center
+        @include media(540) 
+            bottom: 5%
         p
             font-size: 20px
             font-weight: 700
@@ -69,14 +71,25 @@
         display: flex
         align-items: center
         justify-content: space-between
+        @include media(768) 
+            padding: 0 15px 20px
         .content
             flex: 1
             h6
                 font-size: 24px
                 line-height: 1.2
                 text-transform: capitalize
+                @include media(991) 
+                    font-size: 22px
+                @include media(768) 
+                    font-size: 20px
             p
                 font-size: 16px
+                @include media(768) 
+                    font-size: 14px
+        .play-btn
+            @include media(991) 
+                --btnsize: 40px
 
 .hero-banner.banner
     &::before

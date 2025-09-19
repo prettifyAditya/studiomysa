@@ -12,6 +12,9 @@ footer
             display: flex
             align-items: center
             justify-content: space-between
+            @include media(540) 
+                flex-direction: column
+                gap: 10px
             p
                 color: #9C9A9A
             .credit
@@ -29,10 +32,17 @@ footer
             border-bottom: 1px solid #DCD6D633
             align-items: center
             padding: 50px var(--containerfluid) 70px
+            @include media(768) 
+                padding: 30px var(--containerfluid) 50px
+                flex-direction: column
+                gap: 40px
             .colA
                 flex: 0 1 50%
                 max-width: 50%
                 width: 100%
+                @include media(768) 
+                    flex: 1
+                    max-width: 100%
                 .logo
                     width: 300px
                 ul
@@ -60,7 +70,16 @@ footer
                 gap: 70px
                 @include media(1366)
                     gap: 50px
+                @include media(991) 
+                    gap: 40px
+                    justify-content: center
+                @include media(768) 
+                    flex: 1
+                    max-width: 100%
+                    justify-content: start
                 ul
+                    @include media(768) 
+                        flex: 1
                     li
                         a
                             display: block
@@ -68,12 +87,21 @@ footer
                             font-size: 24px
                             @include media(1366)
                                 padding-bottom: 20px
+                            @include media(991) 
+                                font-size: 22px
+                            @include media(540) 
+                                font-size: 20px
+                                padding-bottom: 15px
                             &:hover
                                 transform: translate(5px)
 
     .footer-banner
         .bg
             height: 70vh
+            @include media(991) 
+                height: 60vh
+            @include media(540)     
+                height: 40vh
             .banner-wrapper
                 padding: 0 var(--containerfluid)
                 top: 10%

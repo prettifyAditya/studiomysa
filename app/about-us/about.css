@@ -1539,6 +1539,16 @@ img {
 .swiper-nav {
   line-height: 0;
 }
+@media only screen and (max-width: 540px) {
+  .swiper-nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .swiper-nav.no_bg {
+    display: none;
+  }
+}
 .swiper-nav.no_bg .swiper-prev, .swiper-nav.no_bg .swiper-next {
   background: none;
   box-shadow: none;
@@ -1602,6 +1612,11 @@ img {
 @media only screen and (max-width: 1152px) {
   .swiper-nav.group {
     gap: 0 8px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .swiper-nav.group {
+    display: none;
   }
 }
 .swiper-nav.icon-width-auto .swiper-next svg, .swiper-nav.icon-width-auto .swiper-prev svg {
