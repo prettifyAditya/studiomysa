@@ -31,11 +31,11 @@ export default function InteriorExperience({ reference }) {
     if (!section || cards.length === 0) return;
 
     const pinTarget =  section;
-
+    const factor = window.innerWidth < 768 ? 0.5 : 1;
     const st = ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: () => `+=${window.innerHeight * cards.length}`,
+      end: () => `+=${window.innerHeight * cards.length * factor}`,
       pin: pinTarget,
       scrub: 2,
       onUpdate(self) {

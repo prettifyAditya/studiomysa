@@ -16,11 +16,13 @@ export default function InteriorDesign() {
     const slides = slidesRef.current;
     const totalSlides = slides.length;
 
+    const factor = window.innerWidth < 768 ? 0.5 : 1; 
+
       // Pin the whole section
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top 7%",
-        end: `+=${totalSlides * 100}%`, // section height * number of slides
+        end: `+=${totalSlides * 100 * factor}%`, // section height * number of slides
         pin: true,
         scrub: true,
         markers: false,
