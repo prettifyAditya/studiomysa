@@ -1539,12 +1539,12 @@ img {
 .swiper-nav {
   line-height: 0;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
   .swiper-nav {
     display: none;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
   .swiper-nav.no_bg {
     display: none;
   }
@@ -1614,7 +1614,7 @@ img {
     gap: 0 8px;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
   .swiper-nav.group {
     display: none;
   }
@@ -3064,6 +3064,16 @@ em {
   bottom: 10%;
   translate: 5% 10%;
   animation: scroll 1.5s ease-in-out infinite forwards;
+}
+@media only screen and (max-width: 768px) {
+  .hero-banner.banner .banner-wrapper .scrollBtn {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .hero-banner.banner .banner-wrapper .scrollBtn {
+    width: 30px;
+  }
 }
 @keyframes scroll {
   0% {

@@ -175,6 +175,8 @@
 
 .home-secB
     height: 100vh
+    @include media(540) 
+        height: calc( 100vh - var(--headerfixed) )
     .main_wrapper
         position: relative
         height: 100%
@@ -291,6 +293,9 @@
 
 .home-secD
     width: 100%
+    &.sec-pad-all
+        @include media(540) 
+            padding-top: 40px
     @include before-blur
     &::before
         right: 20%
@@ -317,7 +322,6 @@
         @include media(768) 
             flex-direction: column
         @include media(540) 
-            margin-top: 30px
             gap: 25px
         .colA
             flex: 1
@@ -354,7 +358,8 @@
                 @include media(991) 
                     font-size: 20px
                 @include media(540) 
-                    font-size: 16px
+                    font-size: 24px
+                    font-family: $Lato
             .desc
                 padding: 20px 0 25px
                 @include media(540) 
@@ -399,7 +404,7 @@
                 @include media(768) 
                     font-size: 26px
                 @include media(540) 
-                    font-size: 20px
+                    font-size: 22px
         .process_wrapper
             height: 70vh
             .process-slider
@@ -416,7 +421,7 @@
                     gap: 20px
                     text-align: left
                 @include media(540) 
-                    gap: 10px
+                    gap: 20px
                     text-align: center
                     flex-direction: column
                     justify-content: center

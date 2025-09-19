@@ -16,7 +16,7 @@ export default function InteriorDesign() {
     const slides = slidesRef.current;
     const totalSlides = slides.length;
 
-    const factor = window.innerWidth < 768 ? 0.5 : 1; 
+    const factor = window.innerWidth < 768 ? 0.7 : 1; 
 
       // Pin the whole section
       ScrollTrigger.create({

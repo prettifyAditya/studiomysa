@@ -122,6 +122,10 @@
             bottom: 10%
             translate: 5% 10%
             animation: scroll 1.5s ease-in-out infinite forwards
+            @include media(768)
+                width: 40px 
+            @include media(540)
+                width: 30px
             @keyframes scroll   
                 0%
                     transform: translateY(0px)
