@@ -41,32 +41,29 @@ export default function InteriorExperience({ reference }) {
       onUpdate(self) {
         const progress = self.progress * (cards.length - 1);
         const currentIndex = Math.floor(progress);
+        cards.forEach((card, i) => {
+        card.classList.remove("active", "exit");
 
-        // baseline: clear everything
-        cards.forEach((card) => {
-          card.classList.remove("active", "exit");
-        });
-
-        // set current active
-        if (cards[currentIndex]) {
-          cards[currentIndex].classList.add("active");
+        if (i === currentIndex) {
+          card.classList.add("active");
+        } else if (i < currentIndex) {
+          card.classList.add("exit");
         }
-
-        // set all before current as exit
-        for (let i = 0; i < currentIndex; i++) {
-          cards[i].classList.add("exit");
-        }
+      });
       },
     });
 
-    const onLoad = () => ScrollTrigger.refresh();
-    window.addEventListener("load", onLoad);
-    window.addEventListener("resize", ScrollTrigger.refresh);
+    const handleResize = () => ScrollTrigger.refresh();
+    const handleLoad = () => ScrollTrigger.refresh();
+
+    window.addEventListener("load", handleLoad);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       st.kill();
-      window.removeEventListener("load", onLoad);
-      window.removeEventListener("resize", ScrollTrigger.refresh);
+      window.removeEventListener("load", handleLoad);
+      window.removeEventListener("resize", handleResize);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

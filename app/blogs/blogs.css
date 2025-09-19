@@ -1717,6 +1717,7 @@ img {
   }
 }
 .website-content h2 {
+  font-family: "Lato";
   font-size: 34px;
 }
 @media only screen and (max-width: 675px) {
@@ -1725,6 +1726,7 @@ img {
   }
 }
 .website-content h3 {
+  font-family: "Lato";
   font-size: 28px;
   line-height: 1.21;
 }
@@ -1734,6 +1736,7 @@ img {
   }
 }
 .website-content h4 {
+  font-family: "Lato";
   font-size: 22px;
 }
 @media only screen and (max-width: 675px) {
@@ -1742,6 +1745,7 @@ img {
   }
 }
 .website-content h5 {
+  font-family: "Lato";
   font-size: 18px;
 }
 @media only screen and (max-width: 675px) {
@@ -1750,6 +1754,7 @@ img {
   }
 }
 .website-content h6 {
+  font-family: "Lato";
   font-size: 18px;
 }
 .website-content h2, .website-content h3, .website-content h4 {
@@ -3013,4 +3018,18 @@ em {
   bottom: 8%;
   transform: translate(-50%, 8%);
   animation: scroll 1.5s ease-in-out infinite forwards;
+}
+
+.blog-detail-secB .upper-sec {
+  position: relative;
+  margin-bottom: 50px;
+}
+.blog-detail-secB .upper-sec .heading {
+  text-align: center;
+}
+.blog-detail-secB .upper-sec .swiper-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
 }/*# sourceMappingURL=blogs.css.map */

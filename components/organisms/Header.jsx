@@ -11,7 +11,9 @@ export default function Header(){
     const [headerFixed, setHeaderFixed] = useState(false);
     const pathname = usePathname()
     const isBlogsPage = pathname.startsWith('/blogs')
-    const headerFill = isBlogsPage
+    const isPrivacyPolicyPage = pathname.startsWith('/privacy-policy')
+    const isTermsConditionsPage = pathname.startsWith('/terms-conditions')
+    const headerFill = isBlogsPage || isPrivacyPolicyPage || isTermsConditionsPage
     useEffect(() => {
         const handleScroll = () => {
             setHeaderFixed(window.scrollY > 100)

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import BlogCol from "@/components/molecules/BlogCol";
 
 export default function BlogListing(){
     return(
@@ -7,57 +6,42 @@ export default function BlogListing(){
             <div className="blog-listing-secB bgprime">
                 <div className="container">
                     <div className="common-grid blog-list-grid">
-                        <Link href="/blog-details" className="blog-col item-md">
-                            <figure>
-                                <Image
-                                    src="/assets/images/other/testimonial.jpg"
-                                    alt="Blog Image"
-                                    width={413}
-                                    height={348}
-                                />
-                            </figure>
-                            <figcaption>
-                                <p>07 May 2025</p>
-                                <h6>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-                                natus.
-                                </h6>
-                            </figcaption>
-                        </Link>
-                        <Link href="/blog-details" className="blog-col item-md">
-                            <figure>
-                                <Image
-                                    src="/assets/images/other/testimonial.jpg"
-                                    alt="Blog Image"
-                                    width={413}
-                                    height={348}
-                                />
-                            </figure>
-                            <figcaption>
-                                <p>07 May 2025</p>
-                                <h6>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-                                natus.
-                                </h6>
-                            </figcaption>
-                        </Link>
-                        <Link href="/blog-details" className="blog-col item-md">
-                            <figure>
-                                <Image
-                                    src="/assets/images/other/testimonial.jpg"
-                                    alt="Blog Image"
-                                    width={413}
-                                    height={348}
-                                />
-                            </figure>
-                            <figcaption>
-                                <p>07 May 2025</p>
-                                <h6>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-                                natus.
-                                </h6>
-                            </figcaption>
-                        </Link>
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
+                        <BlogCol
+                            linkHref="/blog-details"
+                            imgSrc="/assets/images/other/testimonial.jpg"
+                            date="07 May 2025"
+                            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, natus."
+                        />
                     </div>
                 </div>
             </div>

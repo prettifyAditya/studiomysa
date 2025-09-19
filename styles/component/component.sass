@@ -129,3 +129,33 @@
         margin: 0 auto
         .form-grid
             --item: 2
+
+.privacy-secA
+    padding: 4rem 0
+    a
+        transition: .5s ease
+        svg
+            vertical-align: middle
+    @include media(675)
+        margin-top: calc(var(--headerfixed) + 50px)
+        padding: 4rem 0 3rem
+.banner
+    &.thank-you-banner
+        .bg
+            height: 100vh
+        .banner-wrapper
+            bottom: 40%
+            left: 50%
+            transform: translate(-50%, 40%)
+            .content
+                display: flex
+                flex-direction: column 
+                justify-content: center
+                align-items: center
+                gap: 20px
+                figure
+                    width: 80px
+                    img
+                        width: 100%
+                a
+                    padding: 20px 16px

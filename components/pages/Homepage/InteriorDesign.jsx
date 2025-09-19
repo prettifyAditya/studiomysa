@@ -13,8 +13,8 @@ export default function InteriorDesign() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const slides = slidesRef.current;
-      const totalSlides = slides.length;
+    const slides = slidesRef.current;
+    const totalSlides = slides.length;
 
       // Pin the whole section
       ScrollTrigger.create({
@@ -36,7 +36,10 @@ export default function InteriorDesign() {
       });
     }, sectionRef);
 
-    return () => ctx.revert();
+    return () => {
+      ctx.revert();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    } 
   }, []);
 
   return (

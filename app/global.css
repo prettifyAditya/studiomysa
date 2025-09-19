@@ -1718,6 +1718,7 @@ img {
   }
 }
 .website-content h2 {
+  font-family: "Lato";
   font-size: 34px;
 }
 @media only screen and (max-width: 675px) {
@@ -1726,6 +1727,7 @@ img {
   }
 }
 .website-content h3 {
+  font-family: "Lato";
   font-size: 28px;
   line-height: 1.21;
 }
@@ -1735,6 +1737,7 @@ img {
   }
 }
 .website-content h4 {
+  font-family: "Lato";
   font-size: 22px;
 }
 @media only screen and (max-width: 675px) {
@@ -1743,6 +1746,7 @@ img {
   }
 }
 .website-content h5 {
+  font-family: "Lato";
   font-size: 18px;
 }
 @media only screen and (max-width: 675px) {
@@ -1751,6 +1755,7 @@ img {
   }
 }
 .website-content h6 {
+  font-family: "Lato";
   font-size: 18px;
 }
 .website-content h2, .website-content h3, .website-content h4 {

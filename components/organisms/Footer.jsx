@@ -80,11 +80,11 @@ export default function Footer() {
                   <li>
                     <Link href="/about-us">About Us</Link>
                   </li>
-                  <li><Link href="">Privacy Policy</Link></li>
+                  <li><Link href="/privacy-policy">Privacy Policy</Link></li>
                 </ul>
                 <ul>
                   <li>
-                    <Link href="">Blogs</Link>
+                    <Link href="/blogs">Blogs</Link>
                   </li>
                   <li>
                     <Link href="/services">Services</Link>

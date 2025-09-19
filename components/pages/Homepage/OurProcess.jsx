@@ -16,11 +16,12 @@ export default function OurProcess(){
     useEffect(() => {
         if (!swiperRef.current) return;
 
-        const swiper = swiperRef.current.swiper;
-        const slidesCount = swiper.slides.length;
+        const swiperInstance = swiperRef.current.swiper;
+        if (!swiperInstance) return;
 
-        // Pin section and control swiper based on scroll progress
-        ScrollTrigger.create({
+        const slidesCount = swiperInstance.slides.length;
+
+        const st = ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top 7%",
         end: () => "+=" + window.innerHeight * slidesCount,
@@ -28,9 +29,19 @@ export default function OurProcess(){
         pin: true,
         onUpdate: (self) => {
             const progress = self.progress * (slidesCount - 1);
-            swiper.slideTo(Math.round(progress));
-        },
+            swiperInstance.slideTo(Math.round(progress));
+            },
         });
+
+        const handleResize = () => ScrollTrigger.refresh();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            st.kill();
+            window.removeEventListener("resize", handleResize);
+            ScrollTrigger.getAll().forEach((t) => t.kill()); // safe cleanup
+        };
+
     }, []);
 
     return(

@@ -1717,6 +1717,7 @@ img {
   }
 }
 .website-content h2 {
+  font-family: "Lato";
   font-size: 34px;
 }
 @media only screen and (max-width: 675px) {
@@ -1725,6 +1726,7 @@ img {
   }
 }
 .website-content h3 {
+  font-family: "Lato";
   font-size: 28px;
   line-height: 1.21;
 }
@@ -1734,6 +1736,7 @@ img {
   }
 }
 .website-content h4 {
+  font-family: "Lato";
   font-size: 22px;
 }
 @media only screen and (max-width: 675px) {
@@ -1742,6 +1745,7 @@ img {
   }
 }
 .website-content h5 {
+  font-family: "Lato";
   font-size: 18px;
 }
 @media only screen and (max-width: 675px) {
@@ -1750,6 +1754,7 @@ img {
   }
 }
 .website-content h6 {
+  font-family: "Lato";
   font-size: 18px;
 }
 .website-content h2, .website-content h3, .website-content h4 {
@@ -3041,4 +3046,45 @@ em {
 }
 .form-section .form-wrapper .form-grid {
   --item: 2;
+}
+
+.privacy-secA {
+  padding: 4rem 0;
+}
+.privacy-secA a {
+  transition: 0.5s ease;
+}
+.privacy-secA a svg {
+  vertical-align: middle;
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA {
+    margin-top: calc(var(--headerfixed) + 50px);
+    padding: 4rem 0 3rem;
+  }
+}
+
+.banner.thank-you-banner .bg {
+  height: 100vh;
+}
+.banner.thank-you-banner .banner-wrapper {
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, 40%);
+}
+.banner.thank-you-banner .banner-wrapper .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.banner.thank-you-banner .banner-wrapper .content figure {
+  width: 80px;
+}
+.banner.thank-you-banner .banner-wrapper .content figure img {
+  width: 100%;
+}
+.banner.thank-you-banner .banner-wrapper .content a {
+  padding: 20px 16px;
 }/*# sourceMappingURL=component.css.map */
