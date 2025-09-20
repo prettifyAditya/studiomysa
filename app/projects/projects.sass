@@ -195,8 +195,12 @@
         .gallery_slider
             .gallery-col
                 border-radius: 15px
+                @include media(540)
+                    border-radius: 0
                 img
                     border-radius: 15px 
+                    @include media(540)
+                        border-radius: 0
 
 .projectD-secC
     border-image: linear-gradient(45deg, #9F711A, #232202) 1
@@ -230,7 +234,8 @@
                 @include media(768) 
                     font-size: 20px
                 @include media(540)
-                    font-size: 16px
+                    display: block
+                    font-size: 25px
     .lux-description-wrapper
         display: grid
         grid-template-columns: repeat(2, 1fr)
@@ -282,6 +287,8 @@
                 color: #FFFFFFB2
                 @include media(540)
                     font-size: 14px
+                    max-width: 260px 
+                    margin: 0 auto
 .projectD-secD
     .heading
         max-width: 830px

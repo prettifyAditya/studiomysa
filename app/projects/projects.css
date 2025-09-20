@@ -238,6 +238,11 @@
   text-align: center;
   margin-top: 23px;
 }
+@media only screen and (max-width: 540px) {
+  .form .submit-grp:not(.text-left) {
+    margin-top: 0;
+  }
+}
 
 .checkbox-full {
   position: relative;
@@ -659,7 +664,7 @@ h3 {
 
 .heading h2 {
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 .heading.h-large h3, .heading.h-large h2 {
   font-size: 36px;
@@ -3217,8 +3222,18 @@ em {
 .projectD-secB .project_gallery_wrapper .gallery_slider .gallery-col {
   border-radius: 15px;
 }
+@media only screen and (max-width: 540px) {
+  .projectD-secB .project_gallery_wrapper .gallery_slider .gallery-col {
+    border-radius: 0;
+  }
+}
 .projectD-secB .project_gallery_wrapper .gallery_slider .gallery-col img {
   border-radius: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .projectD-secB .project_gallery_wrapper .gallery_slider .gallery-col img {
+    border-radius: 0;
+  }
 }
 
 .projectD-secC {
@@ -3296,7 +3311,8 @@ em {
 }
 @media only screen and (max-width: 540px) {
   .projectD-secC .heading h2 span {
-    font-size: 16px;
+    display: block;
+    font-size: 25px;
   }
 }
 .projectD-secC .lux-description-wrapper {
@@ -3377,6 +3393,8 @@ em {
 @media only screen and (max-width: 540px) {
   .projectD-secC .lux-description-wrapper .lux-col .desc {
     font-size: 14px;
+    max-width: 260px;
+    margin: 0 auto;
   }
 }
 
