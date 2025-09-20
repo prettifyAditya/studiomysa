@@ -46,7 +46,7 @@
                             font-size: 16px
                             max-width: 360px 
                         @include media(540) 
-                            max-width: 250px
+                            max-width: 340px
         .scrollBtn
             position: absolute
             right: 5%
@@ -107,8 +107,8 @@
                     transform: translateX(0px)
         @include media(540)
             &::before
-                width: 120px
-                height: 120px
+                width: 300px
+                height: 300px
                 filter: blur(50px)
     .heading
         text-align: center
@@ -135,7 +135,7 @@
     .image-wrapper
         width: 100%
         height: calc( 100vh - var(--headerfixed) )
-        overflow-y: hidden
+        overflow: hidden
         position: relative
         top: 0
         left: 0
@@ -172,6 +172,8 @@
             &.exit
                 opacity: 0
                 transform: translate(-150%, 30%) 
+                @include media(540) 
+                    transform: translate(-150%, 35%) 
 
 .home-secB
     height: 100vh
@@ -183,6 +185,9 @@
         display: flex
         align-items: center
         justify-content: center
+        @include media(540) 
+            align-items: start
+            margin-top: 15%
         .design-slide
             transition: 0.6s ease
             &:not(.active)
@@ -222,6 +227,8 @@
             @include media(768) 
                 flex: 1
                 max-width: 350px
+            @include media(540) 
+                transition: 1s ease
             figure
                 img
                     border-radius: 15px
@@ -235,6 +242,8 @@
                 flex: 1
                 max-width: 100%
                 text-align: center
+            @include media(540) 
+                transition: 1s ease-out
             h2
                 font-size: 36px
                 line-height: 1.2
@@ -380,7 +389,7 @@
     overflow: hidden
     @include before-blur
     @include media(540)
-        height: calc( 100vh - var(--headerheight) )
+        height: 100%
     &::before
         left: 50%
         bottom: -20%
@@ -406,9 +415,11 @@
                 @include media(768) 
                     font-size: 26px
                 @include media(540) 
-                    font-size: 22px
+                    font-size: 20px
         .process_wrapper
             height: 70vh
+            @include media(540) 
+                height: 100%
             .process-slider
                 height: 100%
             .process_col
@@ -446,7 +457,7 @@
                         min-width: 220px
                         transform: translateY(0)
                     @include media(540) 
-                        min-width: 90%
+                        min-width: 95%
                 .colC
                     transform: translateY(-80px)
                     min-width: 200px
@@ -459,7 +470,7 @@
                     max-width: 500px
                     @include media(540) 
                         height: 100%
-                        max-height: fit-content
+                        max-width: 100%
                     .content
                         h3
                             font-size: 48px
@@ -479,8 +490,9 @@
                             max-width: 362px
                             margin: 0 auto 
                             @include media(540) 
-                                max-width: 220px
+                                max-width: 230px
                                 font-size: 14px
+                                line-height: 1.5 
 
 .home-secG
     .main_wrapper

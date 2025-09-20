@@ -6,6 +6,7 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect, useState } from "react";
 
 const projectImages = [
     {
@@ -25,6 +26,12 @@ const projectImages = [
     },
 ]
 export default function ProjectsSection(){
+    const [allowTouch, setAllowTouch] = useState(true);
+    useEffect(() => {
+        if(window.innerWidth < 540) {
+            setAllowTouch(false)
+        }
+    }, [])
     return(
         <div className="home-secD sec-pad-all bgprime">
             <div className="main_wrapper">
@@ -41,6 +48,7 @@ export default function ProjectsSection(){
                                 slidesPerView ={1}
                                 spaceBetween={50}
                                 speed={1800}
+                                allowTouchMove={allowTouch}
                                 modules={[Autoplay]}
                             >
                                 {
