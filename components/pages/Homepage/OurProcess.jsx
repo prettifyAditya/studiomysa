@@ -20,29 +20,32 @@ export default function OurProcess(){
         if (!swiperInstance) return;
 
         const slidesCount = swiperInstance.slides.length;
+        let st = null; // keep reference so cleanup works
 
-        const st = ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: "top 7%",
-        end: () => "+=" + window.innerHeight * slidesCount,
-        scrub: true,
-        pin: true,
-        onUpdate: (self) => {
-            const progress = self.progress * (slidesCount - 1);
-            swiperInstance.slideTo(Math.round(progress));
+        // Run only on >=541px
+        if (window.innerWidth >= 541) {
+            st = ScrollTrigger.create({
+            trigger: sectionRef.current,
+            start: "top 7%",
+            end: () => "+=" + window.innerHeight * slidesCount,
+            scrub: true,
+            pin: true,
+            onUpdate: (self) => {
+                const progress = self.progress * (slidesCount - 1);
+                swiperInstance.slideTo(Math.round(progress));
             },
-        });
+            });
+        }
 
         const handleResize = () => ScrollTrigger.refresh();
         window.addEventListener("resize", handleResize);
 
         return () => {
-            st.kill();
+            if (st) st.kill(); // only kill if created
             window.removeEventListener("resize", handleResize);
             ScrollTrigger.getAll().forEach((t) => t.kill()); // safe cleanup
         };
-
-    }, []);
+        }, []);
 
     return(
         <div className="home-secE sec-pad-all bgprime" ref={sectionRef}>
@@ -53,11 +56,17 @@ export default function OurProcess(){
                 <div className="process_wrapper">
                     <Swiper 
                         className="process-slider"
-                        // autoplay={{ delay: 2000, disableOnInteraction: false,}}
-                        direction="vertical"
                         slidesPerView ={1}
                         spaceBetween={50}
                         speed={1800}
+                        breakpoints={{
+                            0: { 
+                                direction: "horizontal",
+                                slidesPerView: 1.2,
+                                spaceBetween: 10
+                            },   
+                            541: { direction: "vertical" },  
+                        }}
                         onSwiper={(swiper) => (swiperRef.current = { swiper })}
                     >
                         <SwiperSlide>

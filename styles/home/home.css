@@ -3151,7 +3151,7 @@ em {
 }
 @media only screen and (max-width: 540px) {
   .home-secA .heading h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .home-secA .image-wrapper {
@@ -3610,6 +3610,11 @@ em {
   text-align: center;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 540px) {
+  .home-secE .main_wrapper .heading {
+    margin-bottom: 30px;
+  }
+}
 .home-secE .main_wrapper .heading h2 {
   font-size: 48px;
 }
@@ -3664,7 +3669,7 @@ em {
 }
 @media only screen and (max-width: 540px) {
   .home-secE .main_wrapper .process_wrapper .process_col {
-    gap: 20px;
+    gap: 15px;
     text-align: center;
     flex-direction: column;
     justify-content: center;
@@ -3677,6 +3682,11 @@ em {
   max-width: 300px;
   width: 100%;
   line-height: 0;
+}
+@media only screen and (max-width: 540px) {
+  .home-secE .main_wrapper .process_wrapper .process_col .colA figure, .home-secE .main_wrapper .process_wrapper .process_col .colC figure {
+    max-width: 100%;
+  }
 }
 .home-secE .main_wrapper .process_wrapper .process_col .colA figure img, .home-secE .main_wrapper .process_wrapper .process_col .colC figure img {
   border-radius: 10px;
@@ -3694,6 +3704,11 @@ em {
   .home-secE .main_wrapper .process_wrapper .process_col .colA {
     min-width: 220px;
     transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .home-secE .main_wrapper .process_wrapper .process_col .colA {
+    min-width: 90%;
   }
 }
 .home-secE .main_wrapper .process_wrapper .process_col .colC {
@@ -3741,12 +3756,19 @@ em {
 @media only screen and (max-width: 540px) {
   .home-secE .main_wrapper .process_wrapper .process_col .colB .content h3 {
     line-height: 1.2;
+    color: var(--white);
   }
 }
 .home-secE .main_wrapper .process_wrapper .process_col .colB .content p {
   color: rgba(255, 255, 255, 0.6980392157);
   max-width: 362px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 540px) {
+  .home-secE .main_wrapper .process_wrapper .process_col .colB .content p {
+    max-width: 220px;
+    font-size: 14px;
+  }
 }
 
 .home-secG .main_wrapper .upper_sec {

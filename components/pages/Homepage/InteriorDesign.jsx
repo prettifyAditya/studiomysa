@@ -7,6 +7,29 @@ import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const designContent = [
+  {
+    imgSrc : "/assets/images/home/aboutinterior.jpg",
+    heading : "Interior design",
+    content : "Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs. We blend functionality with aesthetics to create environments that inspire."
+  },
+  {
+    imgSrc : "/assets/images/home/aboutinterior.jpg",
+    heading : "Interior design 2",
+    content : "Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs. We blend functionality with aesthetics to create environments that inspire."
+  },
+  {
+    imgSrc : "/assets/images/home/aboutinterior.jpg",
+    heading : "Interior design 3",
+    content : "Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs. We blend functionality with aesthetics to create environments that inspire."
+  },
+  {
+    imgSrc : "/assets/images/home/aboutinterior.jpg",
+    heading : "Interior design 4",
+    content : "Transforming spaces with innovative designs tailored to residential, commercial, and hospitality needs. We blend functionality with aesthetics to create environments that inspire."
+  },
+]
+
 export default function InteriorDesign() {
   const sectionRef = useRef(null);
   const slidesRef = useRef([]);
@@ -47,7 +70,46 @@ export default function InteriorDesign() {
   return (
     <div className="home-secB sec-pad-all bgprime" ref={sectionRef}>
       <div className="main_wrapper">
-        {[1, 2, 3].map((_, i) => (
+        {
+          designContent.map((item, i) => (
+            <div
+              className={`design-slide ${i === 0 ? "active" : ""}`}
+              key={i}
+              ref={(el) => (slidesRef.current[i] = el)}
+            >
+            <div className="flex">
+              <div className="colA">
+                <figure>
+                  <Image
+                    src={item.imgSrc}
+                    width={700}
+                    height={440}
+                    alt="Interior Image"
+                  />
+                </figure>
+              </div>
+              <div className="colB">
+                <h2>{item.heading}</h2>
+                <div className="desc">
+                  <p>
+                    {item.content}
+                  </p>
+                </div>
+                <Link href="/service-details" className="btn">
+                  Explore{" "}
+                  <Image
+                    src="/assets/icon/btn-icon.svg"
+                    width={20}
+                    height={20}
+                    alt="Button Icon"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+          ))
+        }
+        {/* {[1, 2, 3].map((_, i) => (
           <div
             className={`design-slide ${i === 0 ? "active" : ""}`}
             key={i}
@@ -86,7 +148,7 @@ export default function InteriorDesign() {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

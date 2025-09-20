@@ -6,6 +6,29 @@ import "swiper/css/autoplay";
 import Image from "next/image"
 import { Autoplay } from "swiper/modules";
 
+const sliderContent = [
+    {
+        heading: "IDEATE",
+        content: "From dream homes to dynamic workspaces."
+    },
+    {
+        heading: "CREATE",
+        content: "Spaces that inspire. Designs that deliver."
+    },
+    {
+        heading: "DESIGN",
+        content: "On-time. On-point. Designed with precision."
+    },
+    {
+        heading: "BUILD",
+        content: "Design beyond aesthetics. Execution beyond promises."
+    },
+    {
+        heading: "LIVE",
+        content: "Experience the comfort of thoughtful spaces, built for the way you live."
+    },
+]
+
 export default function Herosection({ scrollto }){
     return(
         <div className="banner home-banner">
@@ -22,26 +45,14 @@ export default function Herosection({ scrollto }){
                                     speed={1500}
                                     modules={[Autoplay]}
                                 >
-                                    <SwiperSlide>
-                                        <h2>IDEATE</h2>
-                                        <p>From dream homes to dynamic workspaces.</p>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <h2>CREATE</h2>
-                                        <p>Spaces that inspire. Designs that deliver.</p>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <h2>DESIGN</h2>
-                                        <p>On-time. On-point. Designed with precision.</p>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <h2>BUILD</h2>
-                                        <p>Design beyond aesthetics. Execution beyond promises.</p>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <h2>LIVE</h2>
-                                        <p>Experience the comfort of thoughtful spaces, built for the way you live.</p>
-                                    </SwiperSlide>
+                                    {
+                                        sliderContent.map((item, index) => (
+                                            <SwiperSlide key={index}>
+                                                <h2>{item.heading}</h2>
+                                                <p>{item.content}</p>
+                                            </SwiperSlide>
+                                        )) 
+                                    }
                                 </Swiper>
                             </div>
                         </div>

@@ -6,6 +6,24 @@ import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image"
 import Link from "next/link"
+
+const projectImages = [
+    {
+        imgSrc : "/assets/images/other/project1.jpg"
+    },
+    {
+        imgSrc : "/assets/images/other/project1.jpg"
+    },
+    {
+        imgSrc : "/assets/images/other/project1.jpg"
+    },
+    {
+        imgSrc : "/assets/images/other/project1.jpg"
+    },
+    {
+        imgSrc : "/assets/images/other/project1.jpg"
+    },
+]
 export default function ProjectsSection(){
     return(
         <div className="home-secD sec-pad-all bgprime">
@@ -25,26 +43,15 @@ export default function ProjectsSection(){
                                 speed={1800}
                                 modules={[Autoplay]}
                             >
-                                <SwiperSlide>
-                                    <figure>
-                                        <Image src="/assets/images/other/project1.jpg" width={641} height={427} alt="Project Image"></Image>
-                                    </figure>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <figure>
-                                        <Image src="/assets/images/other/project1.jpg" width={641} height={427} alt="Project Image"></Image>
-                                    </figure>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <figure>
-                                        <Image src="/assets/images/other/project1.jpg" width={641} height={427} alt="Project Image"></Image>
-                                    </figure>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <figure>
-                                        <Image src="/assets/images/other/project1.jpg" width={641} height={427} alt="Project Image"></Image>
-                                    </figure>
-                                </SwiperSlide>
+                                {
+                                    projectImages.map((item, index) => (
+                                        <SwiperSlide key={index}>
+                                            <figure>
+                                                <Image src={item.imgSrc} width={641} height={427} alt="Project Image"></Image>
+                                            </figure>
+                                        </SwiperSlide>
+                                    ))
+                                }
                             </Swiper>
                         </div>
                     </div>
