@@ -43,10 +43,6 @@ export default function MoreProjects(){
                                 slidesPerView: 1.2,
                                 spaceBetween: 20,
                             },
-                            540: {
-                                slidesPerView: 2,
-                                spaceBetween: 10,
-                            },
                             991: {
                                 slidesPerView: 2,
                                 spaceBetween: 20,

@@ -1597,6 +1597,11 @@ img {
      -moz-user-select: none;
           user-select: none;
 }
+@media only screen and (max-width: 768px) {
+  .swiper-nav.center-full {
+    display: none;
+  }
+}
 .swiper-nav.center-full .swiper-prev, .swiper-nav.center-full .swiper-next {
   pointer-events: all;
   -webkit-user-select: auto;
@@ -1721,14 +1726,19 @@ img {
   margin-bottom: 45px;
   text-align: center;
 }
+@media only screen and (max-width: 1024px) {
+  .website-content h1 {
+    font-size: 32px;
+  }
+}
 @media only screen and (max-width: 675px) {
   .website-content h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 @media only screen and (max-width: 520px) {
   .website-content h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 .website-content h2 {
@@ -1747,7 +1757,7 @@ img {
 }
 @media only screen and (max-width: 675px) {
   .website-content h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .website-content h4 {
@@ -1756,7 +1766,7 @@ img {
 }
 @media only screen and (max-width: 675px) {
   .website-content h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .website-content h5 {
@@ -1765,7 +1775,7 @@ img {
 }
 @media only screen and (max-width: 675px) {
   .website-content h5 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .website-content h6 {
@@ -1784,6 +1794,7 @@ img {
   -webkit-hyphens: auto;
           hyphens: auto;
   word-spacing: -0.07em;
+  line-height: 1.5;
 }
 .website-content p b, .website-content li b {
   font-weight: normal;
@@ -1925,7 +1936,7 @@ img {
 @media only screen and (max-width: 675px) {
   .common-grid {
     grid-template-columns: 100%;
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
 }
 
@@ -2921,9 +2932,24 @@ em {
 .project-col figcaption {
   padding-top: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .project-col figcaption {
+    padding-top: 10px;
+  }
+}
 .project-col figcaption p {
   font-size: 24px;
   max-width: 425px;
+}
+@media only screen and (max-width: 768px) {
+  .project-col figcaption p {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .project-col figcaption p {
+    font-size: 16px;
+  }
 }
 
 .item-md.services-md::before {
@@ -2961,10 +2987,25 @@ em {
   padding: 0 20px 30px;
   text-align: center;
 }
+@media only screen and (max-width: 540px) {
+  .item-md.services-md figcaption {
+    padding: 0 10px 20px;
+  }
+}
 .item-md.services-md figcaption h6 {
   font-size: 24px;
   line-height: 1.2;
   text-transform: capitalize;
+}
+@media only screen and (max-width: 768px) {
+  .item-md.services-md figcaption h6 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .item-md.services-md figcaption h6 {
+    font-size: 16px;
+  }
 }
 
 .item-md.testimonial-col::before {
@@ -3058,6 +3099,18 @@ em {
     max-width: 612px;
   }
 }
+@media only screen and (max-width: 768px) {
+  .hero-banner.banner .banner-wrapper .heading p {
+    font-size: 18px;
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .hero-banner.banner .banner-wrapper .heading p {
+    font-size: 16px;
+    max-width: 290px;
+  }
+}
 .hero-banner.banner .banner-wrapper .scrollBtn {
   position: absolute;
   right: 5%;
@@ -3092,8 +3145,28 @@ em {
   margin: 0 auto 60px;
   text-align: center;
 }
+@media only screen and (max-width: 540px) {
+  .form-section .heading {
+    margin: 0 auto 30px;
+  }
+}
 .form-section .heading h2 {
   font-size: 36px;
+}
+@media only screen and (max-width: 991px) {
+  .form-section .heading h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .form-section .heading h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .form-section .heading h2 {
+    font-size: 16px;
+  }
 }
 .form-section .form-wrapper {
   max-width: 850px;
@@ -3101,6 +3174,11 @@ em {
 }
 .form-section .form-wrapper .form-grid {
   --item: 2;
+}
+@media only screen and (max-width: 540px) {
+  .form-section .form-wrapper .form-grid {
+    --item: 1;
+  }
 }
 
 .privacy-secA {
@@ -3114,8 +3192,8 @@ em {
 }
 @media only screen and (max-width: 675px) {
   .privacy-secA {
-    margin-top: calc(var(--headerfixed) + 50px);
-    padding: 4rem 0 3rem;
+    margin-top: var(--headerfixed);
+    padding: 3rem 0;
   }
 }
 
@@ -3123,9 +3201,17 @@ em {
   height: 100vh;
 }
 .banner.thank-you-banner .banner-wrapper {
+  width: 100%;
+  height: 100%;
   bottom: 40%;
   left: 50%;
   transform: translate(-50%, 40%);
+}
+@media only screen and (max-width: 1200px) {
+  .banner.thank-you-banner .banner-wrapper {
+    bottom: 50%;
+    transform: translate(-50%, 40%);
+  }
 }
 .banner.thank-you-banner .banner-wrapper .content {
   display: flex;
@@ -3134,11 +3220,62 @@ em {
   align-items: center;
   gap: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .banner.thank-you-banner .banner-wrapper .content {
+    gap: 10px;
+  }
+}
 .banner.thank-you-banner .banner-wrapper .content figure {
   width: 80px;
 }
+@media only screen and (max-width: 991px) {
+  .banner.thank-you-banner .banner-wrapper .content figure {
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.thank-you-banner .banner-wrapper .content figure {
+    width: 50px;
+  }
+}
 .banner.thank-you-banner .banner-wrapper .content figure img {
   width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  .banner.thank-you-banner .banner-wrapper .content h1 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .banner.thank-you-banner .banner-wrapper .content h1 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner.thank-you-banner .banner-wrapper .content h1 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .banner.thank-you-banner .banner-wrapper .content h1 {
+    font-size: 20px;
+  }
+}
+.banner.thank-you-banner .banner-wrapper .content p {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 991px) {
+  .banner.thank-you-banner .banner-wrapper .content p {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner.thank-you-banner .banner-wrapper .content p {
+    max-width: 300px;
+  }
 }
 .banner.thank-you-banner .banner-wrapper .content a {
   padding: 20px 16px;

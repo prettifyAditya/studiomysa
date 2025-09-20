@@ -39,11 +39,11 @@ export default function ServiceContent({ reference }){
                         breakpoints={{
                             0: {
                                 slidesPerView: 1.2,
-                                spaceBetween: 20,
+                                spaceBetween: 10,
                             },
                             540: {
-                                slidesPerView: 2,
-                                spaceBetween: 10,
+                                slidesPerView: 1.2,
+                                spaceBetween: 20,
                             },
                             991: {
                                 slidesPerView: 2,

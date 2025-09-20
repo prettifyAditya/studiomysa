@@ -13,35 +13,40 @@
             border-radius: 10px
     figcaption
         padding: 0 1.5rem 2rem
+        @include media(768)
+            padding: 0 1rem 1.5rem
         p,h6
             color: $white
         h6
             line-height: 1.2
             text-transform: capitalize
             @include line-clamp(2)
+            @include media(768)
+                font-size: 16px
         p
             margin-bottom: .8rem
             font-size: 14px
 .blog-listing-secA
     @include media(768)
-        margin-top: calc(var(--headerfixed) + 30px)
+        margin-top: var(--headerfixed)
         padding-top: 60px
+    @include media(540)
+        padding-top: 30px
     .content
         h1
             font-size: 50px
             @include media(768)
-                font-size: 42px
+                font-size: 40px 
             @include media(540)
                 font-size: 32px
         p
             font-size: 18px
             color: $text
             margin-top: 8px
-            @include media(767)
+            @include media(768)
                 font-size: 16px
-                max-width: 250px
-                margin-left: auto
-                margin-right: auto
+                max-width: 300px
+                margin: auto
 .blog-listing-secB
     padding-bottom: 7rem
     @include media(768) 
@@ -60,6 +65,9 @@
             @include media(768) 
                 height: 80vh
         .banner-wrapper
+            @include media(991)
+                top: 60%
+                translate: 0 -60%
             .content
                 text-align: left
                 .date 
@@ -76,6 +84,8 @@
                     font-family: $Lato
                     letter-spacing: normal
                     max-width: 540px
+                    @include media(991)
+                        font-size: 32px
                     @include media(768)
                         font-size: 28px
                     @include media(768) 
@@ -85,6 +95,9 @@
             bottom: 12%
             right: 4rem
             z-index: 1
+            @include media(768)
+                bottom: 5%
+                right: 2rem
             img
                 @include media(768)
                     width: 30px
@@ -123,13 +136,28 @@
             bottom: 8%
             transform: translate(-50%, 8%)
             animation: scroll 1.5s ease-in-out infinite forwards
+            @include media(768)
+                width: 40px
+            @include media(540)
+                width: 30px
 
 .blog-detail-secB
     .upper-sec
         position: relative
         margin-bottom: 50px
+        @include media(768)
+            margin-bottom: 40px
+        @include media(540)
+            margin-bottom: 30px
         .heading
             text-align: center 
+            h2
+                @include media(1024)
+                    font-size: 30px
+                @include media(991)
+                    font-size: 24px
+                @include media(540)
+                    font-size: 16px
         .swiper-nav
             position: absolute
             right: 0

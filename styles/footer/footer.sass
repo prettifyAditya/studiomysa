@@ -17,6 +17,8 @@ footer
                 gap: 10px
             p
                 color: #9C9A9A
+                @include media(540)
+                    font-size: 14px
             .credit
                 display: flex
                 align-items: center
@@ -205,10 +207,16 @@ footer
         .nav-list
             width: 100%
             margin: 4rem 0 3rem
+            @include media(768)
+                margin: 3rem 0 2rem
+            @include media(540)
+                margin: 2rem 0 1.5rem
             >li
                 cursor: pointer
                 &:not(:last-child)
                     margin-bottom: 25px
+                    @include media(768)
+                        margin-bottom: 20px
                 &.desktop-non
                     display: none
                 a
@@ -217,6 +225,10 @@ footer
                     color: #00000080
                     display: inline-block
                     @include font(500)
+                    @include media(768)
+                        font-size: 32px
+                    @include media(540)
+                        font-size: 26px
                     &:hover
                         color: var(--primary)
         .bottom-list
@@ -256,12 +268,26 @@ footer
     background: #fff
     &.is-open
         transform: translateX(0%)
+    .close
+        &:not(.btn)
+            @include media(768)
+                top: 20px
+                right: 20px
+        svg
+            @include media(768)
+                width: 20px
+                height: 20px
     .model-body
         margin-top: 70px
         overflow-y: auto
         padding: 0px 35px 30px
         height: calc( 100% - 40px )
         @include scrollbar(3px,$white,var(--secondary),8px)
+        @include media(768)
+            margin-top: 60px
+            padding: 0px 25px 20px
+        @include media(540)
+            margin-top: 50px
         .title
             margin-bottom: 1.5rem
             text-align: center
@@ -276,15 +302,20 @@ footer
                 color: $black
                 line-height: 1.2
                 @include font(500)
+                @include media(768)
+                    font-size: 18px
+                @include media(540)
+                    font-size: 16px
             p
                 color: $text
                 margin-top: 10px
                 font-size: 16px
                 line-height: 1.2
                 max-width: 340px
-                @include media(675)
+                @include media(768)
                     font-size: 14px
                     max-width: 300px
+                    margin: 10px auto 0
         .form
             --item: 1
             --labelbefore: var(--text)

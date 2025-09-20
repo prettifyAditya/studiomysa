@@ -1,25 +1,66 @@
 @use '../../styles/_common' as * 
 
 .banner.hero-banner.contactus_banner
+    .bg
+        @include media(768)
+            height: 80vh
+        @include media(540)
+            height: 70vh
     .main_wrapper
         .heading
             h2
                 font-size: 48px
-
+                @include media(1440)
+                    font-size: 44px
+                @include media(1336)
+                    font-size: 40px
+                @include media(1024)
+                    font-size: 38px
+                @include media(991)
+                    font-size: 34px
+                @include media(768)
+                    font-size: 28px
+                @include media(540)                 
+                    font-size: 20px
+            p
+                @include media(540)        
+                    max-width: 280px
 .contact-secA
     border-image: linear-gradient(45deg, #9F711A, #232202) 1
     border-bottom: 2px solid
     .flex
+        @include media(768)
+            flex-direction: column
         .contact-col
             flex: 1
             text-align: center
             padding: 30px 50px
             &:not(:last-child)
                 border-right: 1px solid #8869472B
+                @include media(768)
+                    border-right: none
+            @include media(1024)
+                padding: 25px 40px
+            @include media(991)
+                padding: 20px
             .icon
                 width: 50px
                 height: 50px
                 margin: 0 auto 40px
+                @include media(1024)
+                    margin: 0 auto 30px
+                @include media(768)
+                    margin: 0 auto 20px
+                @include media(991)
+                    width: 40px
+                    height: 40px
+                    margin: 0 auto 20px
+                @include media(768)
+                    margin: 0 auto 15px
+                @include media(540)   
+                    width: 35px
+                    height: 35px
+                    margin: 0 auto 10px
                 svg, img
                     width: 100%
                     height: 100%
@@ -28,6 +69,10 @@
                 font-size: 24px
                 font-weight: 600
                 margin-bottom: 10px
+                @include media(991)
+                    font-size: 20px
+                @include media(540)   
+                    font-size: 18px
             a:not(.whtspp)       
                 display: block         
                 max-width: 250px
@@ -35,6 +80,8 @@
                 color: #FFFFFFB2
                 &:hover
                     color: $white
+                @include media(540)   
+                    font-size: 14px
             .whtspp
                 display: inline-flex
                 align-items: center
@@ -44,6 +91,8 @@
                 padding: 0 18px
                 height: 36px
                 margin-top: 40px
+                @include media(768)
+                    margin-top: 30px
                 &:hover
                     background: var(--secondary)
 
@@ -63,16 +112,38 @@
             font-weight: 700
             text-transform: capitalize
             margin-bottom: 10px
+            @include media(1024)
+                font-size: 36px
+            @include media(991)
+                font-size: 32px
+            @include media(768)
+                font-size: 28px
+            @include media(540)   
+                font-size: 24px
         p
             color: #A3A3A3
             font-size: 18px
+            @include media(540)   
+                font-size: 16px
     .form-wrapper
         max-width: 850px
         margin: 70px auto 0
+        @include media(1024)
+            margin: 60px auto 0
+        @include media(991)
+            margin: 50px auto 0
+        @include media(540)   
+            margin: 30px auto 0
         .form-grid
             --item: 2
+            @include media(540)   
+                --item: 1
 
 .contact-secC
     line-height: 1
+    height: 600px
+    @include media(768)
+        height: 400px
     iframe
+        height: 100%
         filter: grayscale(1)

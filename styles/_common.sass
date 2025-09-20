@@ -805,6 +805,8 @@ img
         margin: 0 auto
         pointer-events: none
         user-select: none
+        @include media(768)
+            display: none
         .swiper-prev,.swiper-next
             pointer-events: all
             user-select: auto
@@ -902,10 +904,12 @@ img
         font-size: 48px
         margin-bottom: 45px
         text-align: center
+        @include media(1024)
+            font-size: 32px
         @include media(675)
-            font-size: 34px
+            font-size: 28px
         @include media(520)
-            font-size: 30px
+            font-size: 20px
     h2
         font-family: $Lato
         font-size: 34px
@@ -916,17 +920,17 @@ img
         font-size: 28px
         line-height: 1.21
         @include media(675)
-            font-size: 22px
+            font-size: 20px
     h4
         font-family: $Lato
         font-size: 22px
         @include media(675)
-            font-size: 20px
+            font-size: 18px
     h5
         font-family: $Lato
         font-size: 18px
         @include media(675)
-            font-size: 18px
+            font-size: 16px
     h6
         font-family: $Lato
         font-size: 18px
@@ -939,6 +943,7 @@ img
         text-align: justify
         hyphens: auto
         word-spacing: -0.07em
+        line-height: 1.5 
         b
             font-weight: normal
     a
@@ -1044,7 +1049,7 @@ img
         grid-gap: 30px 18px
     @include media(675)
         grid-template-columns: 100%
-        grid-gap: 10px
+        grid-gap: 20px
 
 .product-col
     position: relative

@@ -23,7 +23,7 @@ export default function ThankyouPage(){
                             <img src="assets/icon/handshake.svg" alt="" />
                         </figure>
                         <h1>Thank You!</h1>
-                        <p>Your Query has been sent.</p>
+                        <p>We have received your details and our team will get back to you shortly.</p>
                         <Link href="/" className="btn solid">
                             Back to home
                         </Link>
